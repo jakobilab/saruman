@@ -1,0 +1,218 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/saruman.h File Reference}
+\label{saruman_8h}\index{/home/tobias/work/SunStudioProjects/saruman/src/saruman.h@{/home/tobias/work/SunStudioProjects/saruman/src/saruman.h}}
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf thread\_\-data}
+\begin{CompactList}\small\item\em work around struct for passing multiple arguments with pthread \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+float {\bf alignment\_\-time} [2]
+\item 
+float {\bf error\_\-rate\_\-value}
+\item 
+int {\bf chunk\_\-value}
+\item 
+int {\bf sw\_\-match\_\-value}
+\item 
+int {\bf sw\_\-mismatch\_\-value}
+\item 
+int {\bf read\_\-number\_\-value}
+\item 
+unsigned short int {\bf read\_\-length\_\-value}
+\item 
+unsigned short int {\bf be\_\-verbose\_\-value}
+\item 
+unsigned short int {\bf print\_\-non\_\-matching\_\-reads}
+\item 
+const char $\ast$ {\bf genome\_\-file\_\-value}
+\item 
+const char $\ast$ {\bf read\_\-file\_\-value}
+\item 
+unsigned long int {\bf line\_\-offset}
+\item 
+struct {\bf read\_\-name\_\-hash} $\ast$ {\bf read\_\-names}
+\item 
+char $\ast$ {\bf genome\_\-sequence}
+\item 
+char $\ast$ {\bf reads}
+\item 
+unsigned short int {\bf maximal\_\-errors\_\-allowed}
+\item 
+unsigned short int {\bf qgram\_\-length}
+\item 
+int {\bf exact\_\-tresh}
+\item 
+int {\bf genome\_\-chunk\_\-run}
+\item 
+unsigned int {\bf bases\_\-read}
+\item 
+char $\ast$ {\bf forward\_\-output\_\-control}
+\item 
+char $\ast$ {\bf reverse\_\-output\_\-control}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{saruman.h@{saruman.h}!main@{main}}
+\index{main@{main}!saruman.h@{saruman.h}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$ {\em argv}[$\,$])}\label{saruman_8h_0ddf1224851353fc92bfbff6f499fa97}
+
+
+Main function. Starts the program and does some housekeeping before calling the mapping functions \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]number of CLI arguments \item[{\em argv}]char array of the CLI arguments \end{description}
+\end{Desc}
+
+
+References alignment\_\-time, bases\_\-read, check\_\-user\_\-input(), chunk\_\-value, thread\_\-data::chunksize, clear\_\-name\_\-hash(), clear\_\-qgram\_\-index(), construct\_\-qgram\_\-index(), thread\_\-data::do\_\-reverse, thread\_\-data::error, error\_\-rate\_\-value, exact\_\-tresh, forward\_\-output\_\-control, genome\_\-chunk\_\-run, genome\_\-chunk\_\-value, genome\_\-file\_\-value, genome\_\-sequence, hash\_\-members, line\_\-offset, maximal\_\-errors\_\-allowed, read\_\-name\_\-hash::name, NUM\_\-THREADS, thread\_\-data::number\_\-of\_\-start\_\-positions, pos\_\-counter, print\_\-non\_\-matching\_\-reads, print\_\-qgram\_\-index\_\-statistics(), thread\_\-data::qgram\_\-length, qgram\_\-length, thread\_\-data::qgram\_\-start\_\-positions, qgram\_\-to\_\-read\_\-mapping(), thread\_\-data::read\_\-array, read\_\-file\_\-value, read\_\-length\_\-value, read\_\-multiple\_\-fasta\_\-file(), read\_\-names, thread\_\-data::read\_\-number, read\_\-number\_\-value, thread\_\-data::readlength, reads, thread\_\-data::rest, reverse\_\-output\_\-control, sw\_\-match\_\-value, sw\_\-mismatch\_\-value, and thread\_\-data\_\-array.
+
+\subsection{Variable Documentation}
+\index{saruman.h@{saruman.h}!alignment\_\-time@{alignment\_\-time}}
+\index{alignment\_\-time@{alignment\_\-time}!saruman.h@{saruman.h}}
+\subsubsection[{alignment\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf alignment\_\-time}[2]}\label{saruman_8h_3d68a18b54886db326f17f526cc30d29}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), and main().\index{saruman.h@{saruman.h}!bases\_\-read@{bases\_\-read}}
+\index{bases\_\-read@{bases\_\-read}!saruman.h@{saruman.h}}
+\subsubsection[{bases\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf bases\_\-read}}\label{saruman_8h_b572df0faf4b4c4664e8adc09f305482}
+
+
+
+
+Referenced by main(), and prepare\_\-cuda\_\-alignments().\index{saruman.h@{saruman.h}!be\_\-verbose\_\-value@{be\_\-verbose\_\-value}}
+\index{be\_\-verbose\_\-value@{be\_\-verbose\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{be\_\-verbose\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf be\_\-verbose\_\-value}}\label{saruman_8h_e87ca0c58972a2f744b0fcbb8387cf2e}
+
+
+generates more detailed output \index{saruman.h@{saruman.h}!chunk\_\-value@{chunk\_\-value}}
+\index{chunk\_\-value@{chunk\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{chunk\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf chunk\_\-value}}\label{saruman_8h_0981f0fb32a249e501c5f87dbfaaf13f}
+
+
+holds the number of reads to be processed in one run \index{saruman.h@{saruman.h}!error\_\-rate\_\-value@{error\_\-rate\_\-value}}
+\index{error\_\-rate\_\-value@{error\_\-rate\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{error\_\-rate\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf error\_\-rate\_\-value}}\label{saruman_8h_19d9bf4bb9cbcac470f6e66273ae046b}
+
+
+holds the error rate of the reads, e.g. 0.083 -$>$ 8.3\% 
+
+Referenced by check\_\-user\_\-input(), and main().\index{saruman.h@{saruman.h}!exact\_\-tresh@{exact\_\-tresh}}
+\index{exact\_\-tresh@{exact\_\-tresh}!saruman.h@{saruman.h}}
+\subsubsection[{exact\_\-tresh}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf exact\_\-tresh}}\label{saruman_8h_f36ba40fe509a366a36e5d3197d42857}
+
+
+
+
+Referenced by add\_\-start\_\-position(), main(), and run\_\-seashore().\index{saruman.h@{saruman.h}!forward\_\-output\_\-control@{forward\_\-output\_\-control}}
+\index{forward\_\-output\_\-control@{forward\_\-output\_\-control}!saruman.h@{saruman.h}}
+\subsubsection[{forward\_\-output\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf forward\_\-output\_\-control}}\label{saruman_8h_a9bcc1c47ac7531838eb940e9fec11d6}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), main(), and run\_\-seashore().\index{saruman.h@{saruman.h}!genome\_\-chunk\_\-run@{genome\_\-chunk\_\-run}}
+\index{genome\_\-chunk\_\-run@{genome\_\-chunk\_\-run}!saruman.h@{saruman.h}}
+\subsubsection[{genome\_\-chunk\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf genome\_\-chunk\_\-run}}\label{saruman_8h_ec3c87c657281aeef6d94cbbac6dba5a}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{saruman.h@{saruman.h}!genome\_\-file\_\-value@{genome\_\-file\_\-value}}
+\index{genome\_\-file\_\-value@{genome\_\-file\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{genome\_\-file\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf genome\_\-file\_\-value}}\label{saruman_8h_0f4d9b412b31c8472a2ffbfde3c1f03f}
+
+
+holds the path to the reference genome in fasta format 
+
+Referenced by check\_\-user\_\-input(), and main().\index{saruman.h@{saruman.h}!genome\_\-sequence@{genome\_\-sequence}}
+\index{genome\_\-sequence@{genome\_\-sequence}!saruman.h@{saruman.h}}
+\subsubsection[{genome\_\-sequence}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf genome\_\-sequence}}\label{saruman_8h_571c0bdece58dc19b6806fae78c2cfa6}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{saruman.h@{saruman.h}!line\_\-offset@{line\_\-offset}}
+\index{line\_\-offset@{line\_\-offset}!saruman.h@{saruman.h}}
+\subsubsection[{line\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int {\bf line\_\-offset}}\label{saruman_8h_2356197c34d4150fc2c98d9ed2ccef11}
+
+
+
+
+Referenced by main(), and read\_\-multiple\_\-fasta\_\-file().\index{saruman.h@{saruman.h}!maximal\_\-errors\_\-allowed@{maximal\_\-errors\_\-allowed}}
+\index{maximal\_\-errors\_\-allowed@{maximal\_\-errors\_\-allowed}!saruman.h@{saruman.h}}
+\subsubsection[{maximal\_\-errors\_\-allowed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf maximal\_\-errors\_\-allowed}}\label{saruman_8h_8036c9951f326930fb8da3f9eada65cb}
+
+
+
+
+Referenced by add\_\-start\_\-position(), main(), and read\_\-multiple\_\-fasta\_\-file().\index{saruman.h@{saruman.h}!print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}}
+\index{print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}!saruman.h@{saruman.h}}
+\subsubsection[{print\_\-non\_\-matching\_\-reads}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf print\_\-non\_\-matching\_\-reads}}\label{saruman_8h_a62460c85989c1db232083ed238caac4}
+
+
+print non matching reads \index{saruman.h@{saruman.h}!qgram\_\-length@{qgram\_\-length}}
+\index{qgram\_\-length@{qgram\_\-length}!saruman.h@{saruman.h}}
+\subsubsection[{qgram\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf qgram\_\-length}}\label{saruman_8h_dca41ef662c3741c7e78c3afc8fb52ec}
+
+
+
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{saruman.h@{saruman.h}!read\_\-file\_\-value@{read\_\-file\_\-value}}
+\index{read\_\-file\_\-value@{read\_\-file\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{read\_\-file\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf read\_\-file\_\-value}}\label{saruman_8h_7e0ebff9d0ff905d5fba75c60367c542}
+
+
+holds the path to the file in fasta format containing the reads 
+
+Referenced by check\_\-user\_\-input(), and main().\index{saruman.h@{saruman.h}!read\_\-length\_\-value@{read\_\-length\_\-value}}
+\index{read\_\-length\_\-value@{read\_\-length\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{read\_\-length\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf read\_\-length\_\-value}}\label{saruman_8h_479a7d2a7ccfd26746c3831ea1d46afe}
+
+
+holds the length of each read in bp \index{saruman.h@{saruman.h}!read\_\-names@{read\_\-names}}
+\index{read\_\-names@{read\_\-names}!saruman.h@{saruman.h}}
+\subsubsection[{read\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf read\_\-name\_\-hash}$\ast$ {\bf read\_\-names}}\label{saruman_8h_0aa4bc36df5f7c54e3b8663dfd3b40ca}
+
+
+holds the results aka start positions in genome \index{saruman.h@{saruman.h}!read\_\-number\_\-value@{read\_\-number\_\-value}}
+\index{read\_\-number\_\-value@{read\_\-number\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{read\_\-number\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf read\_\-number\_\-value}}\label{saruman_8h_39784325be5139d2f724b4c8574fd8ad}
+
+
+holds the number of total reads beeing mapped by the program 
+
+Referenced by check\_\-user\_\-input(), and main().\index{saruman.h@{saruman.h}!reads@{reads}}
+\index{reads@{reads}!saruman.h@{saruman.h}}
+\subsubsection[{reads}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf reads}}\label{saruman_8h_b223bee0f0147d30d97bc6e330554830}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{saruman.h@{saruman.h}!reverse\_\-output\_\-control@{reverse\_\-output\_\-control}}
+\index{reverse\_\-output\_\-control@{reverse\_\-output\_\-control}!saruman.h@{saruman.h}}
+\subsubsection[{reverse\_\-output\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf reverse\_\-output\_\-control}}\label{saruman_8h_a587c410cb1f4288b1e9f7baca1cf5e3}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), main(), and run\_\-seashore().\index{saruman.h@{saruman.h}!sw\_\-match\_\-value@{sw\_\-match\_\-value}}
+\index{sw\_\-match\_\-value@{sw\_\-match\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{sw\_\-match\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-match\_\-value}}\label{saruman_8h_1f93bbee2addec9da31597d83b7160c0}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module \index{saruman.h@{saruman.h}!sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}}
+\index{sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}!saruman.h@{saruman.h}}
+\subsubsection[{sw\_\-mismatch\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-mismatch\_\-value}}\label{saruman_8h_064ce347753ae0707c1ff0cea06e6366}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 

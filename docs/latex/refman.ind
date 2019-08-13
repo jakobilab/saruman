@@ -1,0 +1,439 @@
+\begin{theindex}
+
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.cu}, 
+		13
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.h}, 
+		17
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/hash.c}, 19
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/hash.h}, 25
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/saruman.c}, 32
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/saruman.h}, 34
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/util.c}, 37
+  \item {/home/tobias/work/SunStudioProjects/saruman/src/util.h}, 40
+
+  \indexspace
+
+  \item {add\_\-qgram\_\-to\_\-index}
+    \subitem {hash.c}, 19
+    \subitem {hash.h}, 26
+  \item {add\_\-start\_\-position}
+    \subitem {hash.c}, 20
+    \subitem {hash.h}, 26
+  \item {alignment\_\-time}
+    \subitem {cuda-functions.cu}, 16
+    \subitem {saruman.h}, 35
+
+  \indexspace
+
+  \item {be\_\-verbose\_\-parameter}
+    \subitem {util.h}, 43
+  \item {be\_\-verbose\_\-value}
+    \subitem {cuda-functions.h}, 18
+    \subitem {saruman.h}, 35
+    \subitem {util.h}, 43
+  \item {BUFFER\_\-FACTOR}
+    \subitem {saruman.c}, 32
+
+  \indexspace
+
+  \item {check\_\-user\_\-input}
+    \subitem {util.c}, 37
+    \subitem {util.h}, 41
+  \item {chunk\_\-parameter}
+    \subitem {util.h}, 43
+  \item {chunk\_\-value}
+    \subitem {hash.h}, 30
+    \subitem {saruman.h}, 35
+    \subitem {util.h}, 43
+  \item {chunksize}
+    \subitem {thread\_\-data}, 10
+  \item {clear\_\-name\_\-hash}
+    \subitem {hash.c}, 20
+    \subitem {hash.h}, 26
+  \item {clear\_\-qgram\_\-index}
+    \subitem {hash.c}, 20
+    \subitem {hash.h}, 27
+  \item {clear\_\-result\_\-hash}
+    \subitem {hash.c}, 21
+    \subitem {hash.h}, 27
+  \item {compute\_\-score}
+    \subitem {cuda-functions.cu}, 14
+  \item {construct\_\-qgram\_\-index}
+    \subitem {util.c}, 38
+    \subitem {util.h}, 41
+  \item {cuda-functions.cu}
+    \subitem {alignment\_\-time}, 16
+    \subitem {compute\_\-score}, 14
+    \subitem {cuda\_\-needleman\_\-wunsch}, 14
+    \subitem {get\_\-alignment}, 15
+    \subitem {get\_\-cuda\_\-infos}, 15
+    \subitem {minimize}, 15
+    \subitem {NR\_\-OF\_\-BLOCKS}, 14
+    \subitem {reverse\_\-sequence}, 15
+    \subitem {SWAP\_\-CHAR}, 14
+  \item {cuda-functions.h}
+    \subitem {be\_\-verbose\_\-value}, 18
+    \subitem {cuda\_\-needleman\_\-wunsch}, 17
+    \subitem {get\_\-cuda\_\-infos}, 18
+    \subitem {qgram\_\-length}, 18
+    \subitem {read\_\-names}, 18
+    \subitem {results}, 18
+  \item {cuda\_\-needleman\_\-wunsch}
+    \subitem {cuda-functions.cu}, 14
+    \subitem {cuda-functions.h}, 17
+  \item {cuda\_\-queue\_\-check}
+    \subitem {hash.c}, 21
+    \subitem {hash.h}, 27
+
+  \indexspace
+
+  \item {direction\_\-and\_\-matching\_\-qgrams}
+    \subitem {result\_\-hash}, 8
+  \item {do\_\-reverse}
+    \subitem {thread\_\-data}, 10
+
+  \indexspace
+
+  \item {end}
+    \subitem {util.h}, 43
+  \item {error}
+    \subitem {thread\_\-data}, 10
+  \item {error\_\-rate\_\-parameter}
+    \subitem {util.h}, 43
+  \item {error\_\-rate\_\-value}
+    \subitem {saruman.h}, 35
+    \subitem {util.h}, 43
+
+  \indexspace
+
+  \item {genome\_\-chunk\_\-parameter}
+    \subitem {util.h}, 43
+  \item {genome\_\-chunk\_\-run}
+    \subitem {hash.h}, 30
+    \subitem {saruman.h}, 35
+  \item {genome\_\-chunk\_\-value}
+    \subitem {util.h}, 44
+  \item {genome\_\-file\_\-offset}
+    \subitem {util.h}, 44
+  \item {genome\_\-file\_\-parameter}
+    \subitem {util.h}, 44
+  \item {genome\_\-file\_\-value}
+    \subitem {saruman.h}, 35
+    \subitem {util.h}, 44
+  \item {genome\_\-sequence}
+    \subitem {hash.h}, 30
+    \subitem {saruman.h}, 35
+  \item {get\_\-alignment}
+    \subitem {cuda-functions.cu}, 15
+  \item {get\_\-cuda\_\-infos}
+    \subitem {cuda-functions.cu}, 15
+    \subitem {cuda-functions.h}, 18
+
+  \indexspace
+
+  \item {hash.c}
+    \subitem {add\_\-qgram\_\-to\_\-index}, 19
+    \subitem {add\_\-start\_\-position}, 20
+    \subitem {clear\_\-name\_\-hash}, 20
+    \subitem {clear\_\-qgram\_\-index}, 20
+    \subitem {clear\_\-result\_\-hash}, 21
+    \subitem {cuda\_\-queue\_\-check}, 21
+    \subitem {perform\_\-hashtable\_\-identity\_\-check}, 21
+    \subitem {prepare\_\-cuda\_\-alignments}, 21
+    \subitem {print\_\-qgram\_\-index\_\-statistics}, 22
+    \subitem {qgram\_\-lookup}, 22
+    \subitem {qgram\_\-to\_\-read\_\-mapping}, 22
+    \subitem {qgrams}, 24
+    \subitem {run\_\-seashore}, 23
+  \item {hash.h}
+    \subitem {add\_\-qgram\_\-to\_\-index}, 26
+    \subitem {add\_\-start\_\-position}, 26
+    \subitem {chunk\_\-value}, 30
+    \subitem {clear\_\-name\_\-hash}, 26
+    \subitem {clear\_\-qgram\_\-index}, 27
+    \subitem {clear\_\-result\_\-hash}, 27
+    \subitem {cuda\_\-queue\_\-check}, 27
+    \subitem {genome\_\-chunk\_\-run}, 30
+    \subitem {genome\_\-sequence}, 30
+    \subitem {hash\_\-members}, 30
+    \subitem {maximal\_\-errors\_\-allowed}, 30
+    \subitem {perform\_\-hashtable\_\-identity\_\-check}, 27
+    \subitem {pos\_\-counter}, 30
+    \subitem {prepare\_\-cuda\_\-alignments}, 28
+    \subitem {print\_\-qgram\_\-index\_\-statistics}, 28
+    \subitem {qgram\_\-lookup}, 28
+    \subitem {qgram\_\-to\_\-read\_\-mapping}, 29
+    \subitem {read\_\-length\_\-value}, 30
+    \subitem {read\_\-names}, 31
+    \subitem {reads}, 31
+    \subitem {run\_\-seashore}, 29
+    \subitem {sw\_\-match\_\-value}, 31
+    \subitem {sw\_\-mismatch\_\-value}, 31
+  \item {hash\_\-members}
+    \subitem {hash.h}, 30
+  \item {help\_\-parameter}
+    \subitem {util.h}, 44
+  \item {help\_\-value}
+    \subitem {util.h}, 44
+  \item {hh}
+    \subitem {qgram\_\-hash}, 5
+    \subitem {read\_\-name\_\-hash}, 7
+    \subitem {result\_\-hash}, 8
+
+  \indexspace
+
+  \item {line\_\-offset}
+    \subitem {saruman.h}, 35
+    \subitem {util.h}, 44
+
+  \indexspace
+
+  \item {main}
+    \subitem {saruman.c}, 32
+    \subitem {saruman.h}, 34
+  \item {MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}
+    \subitem {util.h}, 41
+  \item {maximal\_\-errors\_\-allowed}
+    \subitem {hash.h}, 30
+    \subitem {saruman.h}, 35
+  \item {minimize}
+    \subitem {cuda-functions.cu}, 15
+
+  \indexspace
+
+  \item {name}
+    \subitem {read\_\-name\_\-hash}, 7
+  \item {next\_\-pos}
+    \subitem {qgram\_\-hash}, 5
+    \subitem {result\_\-hash}, 8
+  \item {NR\_\-OF\_\-BLOCKS}
+    \subitem {cuda-functions.cu}, 14
+  \item {NUM\_\-THREADS}
+    \subitem {saruman.c}, 32
+  \item {number\_\-of\_\-start\_\-positions}
+    \subitem {thread\_\-data}, 10
+
+  \indexspace
+
+  \item {perform\_\-hashtable\_\-identity\_\-check}
+    \subitem {hash.c}, 21
+    \subitem {hash.h}, 27
+  \item {pos\_\-counter}
+    \subitem {hash.h}, 30
+  \item {positions}
+    \subitem {qgram\_\-hash}, 5
+    \subitem {result\_\-hash}, 8
+  \item {prepare\_\-cuda\_\-alignments}
+    \subitem {hash.c}, 21
+    \subitem {hash.h}, 28
+  \item {print\_\-qgram\_\-index\_\-statistics}
+    \subitem {hash.c}, 22
+    \subitem {hash.h}, 28
+
+  \indexspace
+
+  \item {qgram}
+    \subitem {qgram\_\-hash}, 6
+  \item {qgram\_\-hash}, 5
+    \subitem {hh}, 5
+    \subitem {next\_\-pos}, 5
+    \subitem {positions}, 5
+    \subitem {qgram}, 6
+  \item {qgram\_\-length}
+    \subitem {cuda-functions.h}, 18
+    \subitem {saruman.h}, 36
+    \subitem {thread\_\-data}, 10
+  \item {qgram\_\-lookup}
+    \subitem {hash.c}, 22
+    \subitem {hash.h}, 28
+  \item {qgram\_\-start\_\-positions}
+    \subitem {thread\_\-data}, 11
+  \item {qgram\_\-to\_\-read\_\-mapping}
+    \subitem {hash.c}, 22
+    \subitem {hash.h}, 29
+  \item {qgrams}
+    \subitem {hash.c}, 24
+
+  \indexspace
+
+  \item {read\_\-array}
+    \subitem {thread\_\-data}, 11
+  \item {read\_\-file\_\-parameter}
+    \subitem {util.h}, 44
+  \item {read\_\-file\_\-value}
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 44
+  \item {read\_\-genome\_\-fasta\_\-file}
+    \subitem {util.c}, 38
+    \subitem {util.h}, 42
+  \item {read\_\-id}
+    \subitem {result\_\-hash}, 9
+  \item {read\_\-length\_\-parameter}
+    \subitem {util.h}, 44
+  \item {read\_\-length\_\-value}
+    \subitem {hash.h}, 30
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 45
+  \item {read\_\-multiple\_\-fasta\_\-file}
+    \subitem {util.c}, 38
+    \subitem {util.h}, 42
+  \item {read\_\-name\_\-hash}, 7
+    \subitem {hh}, 7
+    \subitem {name}, 7
+    \subitem {read\_\-number}, 7
+  \item {read\_\-names}
+    \subitem {cuda-functions.h}, 18
+    \subitem {hash.h}, 31
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 45
+  \item {read\_\-number}
+    \subitem {read\_\-name\_\-hash}, 7
+    \subitem {thread\_\-data}, 11
+  \item {read\_\-number\_\-parameter}
+    \subitem {util.h}, 45
+  \item {read\_\-number\_\-value}
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 45
+  \item {readlength}
+    \subitem {thread\_\-data}, 11
+  \item {reads}
+    \subitem {hash.h}, 31
+    \subitem {saruman.h}, 36
+  \item {rest}
+    \subitem {thread\_\-data}, 11
+  \item {result\_\-hash}, 8
+    \subitem {direction\_\-and\_\-matching\_\-qgrams}, 8
+    \subitem {hh}, 8
+    \subitem {next\_\-pos}, 8
+    \subitem {positions}, 8
+    \subitem {read\_\-id}, 9
+  \item {results}
+    \subitem {cuda-functions.h}, 18
+  \item {reverse}
+    \subitem {util.c}, 39
+    \subitem {util.h}, 42
+  \item {reverse\_\-complement}
+    \subitem {util.c}, 39
+    \subitem {util.h}, 42
+  \item {reverse\_\-sequence}
+    \subitem {cuda-functions.cu}, 15
+  \item {run\_\-seashore}
+    \subitem {hash.c}, 23
+    \subitem {hash.h}, 29
+
+  \indexspace
+
+  \item {saruman.c}
+    \subitem {BUFFER\_\-FACTOR}, 32
+    \subitem {main}, 32
+    \subitem {NUM\_\-THREADS}, 32
+    \subitem {thread\_\-data\_\-array}, 33
+  \item {saruman.h}
+    \subitem {alignment\_\-time}, 35
+    \subitem {be\_\-verbose\_\-value}, 35
+    \subitem {chunk\_\-value}, 35
+    \subitem {error\_\-rate\_\-value}, 35
+    \subitem {genome\_\-chunk\_\-run}, 35
+    \subitem {genome\_\-file\_\-value}, 35
+    \subitem {genome\_\-sequence}, 35
+    \subitem {line\_\-offset}, 35
+    \subitem {main}, 34
+    \subitem {maximal\_\-errors\_\-allowed}, 35
+    \subitem {qgram\_\-length}, 36
+    \subitem {read\_\-file\_\-value}, 36
+    \subitem {read\_\-length\_\-value}, 36
+    \subitem {read\_\-names}, 36
+    \subitem {read\_\-number\_\-value}, 36
+    \subitem {reads}, 36
+    \subitem {sw\_\-match\_\-value}, 36
+    \subitem {sw\_\-mismatch\_\-value}, 36
+  \item {sw\_\-match\_\-parameter}
+    \subitem {util.h}, 45
+  \item {sw\_\-match\_\-value}
+    \subitem {hash.h}, 31
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 45
+  \item {sw\_\-mismatch\_\-parameter}
+    \subitem {util.h}, 45
+  \item {sw\_\-mismatch\_\-value}
+    \subitem {hash.h}, 31
+    \subitem {saruman.h}, 36
+    \subitem {util.h}, 45
+  \item {SWAP\_\-CHAR}
+    \subitem {cuda-functions.cu}, 14
+    \subitem {util.c}, 37
+
+  \indexspace
+
+  \item {thread\_\-data}, 10
+    \subitem {chunksize}, 10
+    \subitem {do\_\-reverse}, 10
+    \subitem {error}, 10
+    \subitem {number\_\-of\_\-start\_\-positions}, 10
+    \subitem {qgram\_\-length}, 10
+    \subitem {qgram\_\-start\_\-positions}, 11
+    \subitem {read\_\-array}, 11
+    \subitem {read\_\-number}, 11
+    \subitem {readlength}, 11
+    \subitem {rest}, 11
+  \item {thread\_\-data\_\-array}
+    \subitem {saruman.c}, 33
+
+  \indexspace
+
+  \item {util.c}
+    \subitem {check\_\-user\_\-input}, 37
+    \subitem {construct\_\-qgram\_\-index}, 38
+    \subitem {read\_\-genome\_\-fasta\_\-file}, 38
+    \subitem {read\_\-multiple\_\-fasta\_\-file}, 38
+    \subitem {reverse}, 39
+    \subitem {reverse\_\-complement}, 39
+    \subitem {SWAP\_\-CHAR}, 37
+    \subitem {VERSION}, 37
+  \item {util.h}
+    \subitem {be\_\-verbose\_\-parameter}, 43
+    \subitem {be\_\-verbose\_\-value}, 43
+    \subitem {check\_\-user\_\-input}, 41
+    \subitem {chunk\_\-parameter}, 43
+    \subitem {chunk\_\-value}, 43
+    \subitem {construct\_\-qgram\_\-index}, 41
+    \subitem {end}, 43
+    \subitem {error\_\-rate\_\-parameter}, 43
+    \subitem {error\_\-rate\_\-value}, 43
+    \subitem {genome\_\-chunk\_\-parameter}, 43
+    \subitem {genome\_\-chunk\_\-value}, 44
+    \subitem {genome\_\-file\_\-offset}, 44
+    \subitem {genome\_\-file\_\-parameter}, 44
+    \subitem {genome\_\-file\_\-value}, 44
+    \subitem {help\_\-parameter}, 44
+    \subitem {help\_\-value}, 44
+    \subitem {line\_\-offset}, 44
+    \subitem {MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}, 41
+    \subitem {read\_\-file\_\-parameter}, 44
+    \subitem {read\_\-file\_\-value}, 44
+    \subitem {read\_\-genome\_\-fasta\_\-file}, 42
+    \subitem {read\_\-length\_\-parameter}, 44
+    \subitem {read\_\-length\_\-value}, 45
+    \subitem {read\_\-multiple\_\-fasta\_\-file}, 42
+    \subitem {read\_\-names}, 45
+    \subitem {read\_\-number\_\-parameter}, 45
+    \subitem {read\_\-number\_\-value}, 45
+    \subitem {reverse}, 42
+    \subitem {reverse\_\-complement}, 42
+    \subitem {sw\_\-match\_\-parameter}, 45
+    \subitem {sw\_\-match\_\-value}, 45
+    \subitem {sw\_\-mismatch\_\-parameter}, 45
+    \subitem {sw\_\-mismatch\_\-value}, 45
+    \subitem {version\_\-parameter}, 45
+    \subitem {version\_\-value}, 46
+
+  \indexspace
+
+  \item {VERSION}
+    \subitem {util.c}, 37
+  \item {version\_\-parameter}
+    \subitem {util.h}, 45
+  \item {version\_\-value}
+    \subitem {util.h}, 46
+
+\end{theindex}

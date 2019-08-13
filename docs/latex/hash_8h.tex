@@ -1,0 +1,365 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/hash.h File Reference}
+\label{hash_8h}\index{/home/tobias/work/SunStudioProjects/saruman/src/hash.h@{/home/tobias/work/SunStudioProjects/saruman/src/hash.h}}
+{\tt \#include \char`\"{}util.h\char`\"{}}\par
+{\tt \#include $<$uthash.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf qgram\_\-hash}
+\begin{CompactList}\small\item\em a structure needed to built a hash index of qgram start positions \item\end{CompactList}\item 
+struct {\bf result\_\-hash}
+\begin{CompactList}\small\item\em a structure needed to built a hash index of mapped reads \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+unsigned short int {\bf add\_\-qgram\_\-to\_\-index} (char $\ast$qgram, int start\_\-position\_\-paramater)
+\item 
+unsigned short int {\bf add\_\-start\_\-position} (unsigned int read\_\-id, int start\_\-position, char direction\_\-and\_\-qgrams, struct {\bf result\_\-hash} $\ast$$\ast${\bf results}, unsigned int $\ast$alignment\_\-queue, int possible)
+\item 
+short int {\bf perform\_\-hashtable\_\-identity\_\-check} (void)
+\item 
+struct {\bf qgram\_\-hash} $\ast$ {\bf qgram\_\-lookup} (char $\ast$qgram)
+\item 
+void $\ast$ {\bf qgram\_\-to\_\-read\_\-mapping} (void $\ast$threadarg)
+\item 
+void {\bf print\_\-qgram\_\-index\_\-statistics} (int qgram\_\-size)
+\item 
+struct {\bf result\_\-hash} $\ast$ {\bf run\_\-seashore} (int chunksize, int run, int number\_\-of\_\-start\_\-positions, int {\bf qgram\_\-length}, int error, int rest, int do\_\-reverse, unsigned int $\ast$data\_\-array, struct {\bf result\_\-hash} $\ast${\bf results}, unsigned int $\ast$alignment\_\-queue, unsigned int $\ast$data\_\-array\_\-offsets)
+\item 
+void {\bf prepare\_\-cuda\_\-alignments} (int mismatch, int match, int error, struct {\bf result\_\-hash} $\ast${\bf results}, unsigned int $\ast$alignment\_\-queue, int do\_\-reverse)
+\item 
+void {\bf cuda\_\-queue\_\-check} (int mismatch, int match, int error, struct {\bf result\_\-hash} $\ast${\bf results}, unsigned int $\ast$alignment\_\-queue, int do\_\-reverse)
+\item 
+void {\bf clear\_\-result\_\-hash} (struct {\bf result\_\-hash} $\ast${\bf results})
+\item 
+void {\bf clear\_\-name\_\-hash} (void)
+\item 
+void {\bf clear\_\-qgram\_\-index} (void)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int {\bf chunk\_\-value}
+\item 
+int {\bf sw\_\-match\_\-value}
+\item 
+int {\bf sw\_\-mismatch\_\-value}
+\item 
+int {\bf genome\_\-chunk\_\-run}
+\item 
+int {\bf exact\_\-tresh}
+\item 
+unsigned int {\bf bases\_\-read}
+\item 
+char $\ast$ {\bf forward\_\-output\_\-control}
+\item 
+char $\ast$ {\bf reverse\_\-output\_\-control}
+\item 
+char $\ast$ {\bf genome\_\-sequence}
+\item 
+unsigned short int {\bf read\_\-length\_\-value}
+\item 
+unsigned short int {\bf print\_\-non\_\-matching\_\-reads}
+\item 
+char $\ast$ {\bf reads}
+\item 
+struct {\bf read\_\-name\_\-hash} $\ast$ {\bf read\_\-names}
+\item 
+unsigned short int {\bf maximal\_\-errors\_\-allowed}
+\item 
+unsigned int {\bf pos\_\-counter}
+\item 
+unsigned int {\bf hash\_\-members}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{hash.h@{hash.h}!add\_\-qgram\_\-to\_\-index@{add\_\-qgram\_\-to\_\-index}}
+\index{add\_\-qgram\_\-to\_\-index@{add\_\-qgram\_\-to\_\-index}!hash.h@{hash.h}}
+\subsubsection[{add\_\-qgram\_\-to\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int add\_\-qgram\_\-to\_\-index (char $\ast$ {\em qgram}, \/  int {\em start\_\-position\_\-paramater})}\label{hash_8h_de98572ebf93959b2b0d35b5e0b01e0d}
+
+
+Checks if the given start position for the given qgram is a new one and stores it in the corresponding struct of the \doxyref{qgram\_\-hash}{p.}{structqgram__hash}. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em qgram}]the qgram \item[{\em start\_\-position\_\-paramater}]start position to be added to the qgram \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 if the qgram is new, 1 if a read is updated with a new position \end{Desc}
+
+
+References qgram\_\-hash::next\_\-pos, pos\_\-counter, qgram\_\-hash::positions, qgram\_\-hash::qgram, and qgram\_\-lookup().
+
+Referenced by construct\_\-qgram\_\-index().\index{hash.h@{hash.h}!add\_\-start\_\-position@{add\_\-start\_\-position}}
+\index{add\_\-start\_\-position@{add\_\-start\_\-position}!hash.h@{hash.h}}
+\subsubsection[{add\_\-start\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int add\_\-start\_\-position (unsigned int {\em read\_\-id}, \/  int {\em start\_\-position}, \/  char {\em direction\_\-and\_\-qgrams}, \/  struct {\bf result\_\-hash} $\ast$$\ast$ {\em results}, \/  unsigned int $\ast$ {\em alignment\_\-queue}, \/  int {\em possible})}\label{hash_8h_7382127bec6cb81d8975005347bd32e6}
+
+
+Checks if the given start position for the given read is a new one and stores it in the corresponding struct of the \doxyref{result\_\-hash}{p.}{structresult__hash}. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em read\_\-id}]unique number of the read \item[{\em start\_\-position}]start position to be added to the read \item[{\em direction\_\-and\_\-qgrams}]holds the direction and the matching qgram(s) \item[{\em results}]reference to the result hash of this thread \item[{\em alignment\_\-queue}]reference to the alignment queque of this thread \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 if the read is new, 1 if the start position already exists and 2 if a read is updated with a new position \end{Desc}
+
+
+References result\_\-hash::direction\_\-and\_\-matching\_\-qgrams, exact\_\-tresh, maximal\_\-errors\_\-allowed, result\_\-hash::next\_\-pos, result\_\-hash::positions, and result\_\-hash::read\_\-id.
+
+Referenced by run\_\-seashore().\index{hash.h@{hash.h}!clear\_\-name\_\-hash@{clear\_\-name\_\-hash}}
+\index{clear\_\-name\_\-hash@{clear\_\-name\_\-hash}!hash.h@{hash.h}}
+\subsubsection[{clear\_\-name\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}void clear\_\-name\_\-hash (void)}\label{hash_8h_cd338d230d154ef288fc505f159aa376}
+
+
+Clears and frees the \doxyref{read\_\-name\_\-hash}{p.}{structread__name__hash} \begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References read\_\-names.
+
+Referenced by main().\index{hash.h@{hash.h}!clear\_\-qgram\_\-index@{clear\_\-qgram\_\-index}}
+\index{clear\_\-qgram\_\-index@{clear\_\-qgram\_\-index}!hash.h@{hash.h}}
+\subsubsection[{clear\_\-qgram\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}void clear\_\-qgram\_\-index (void)}\label{hash_8h_a0f9df556f603a2ab1a2cb9a3b403d78}
+
+
+Clears and frees the \doxyref{qgram\_\-hash}{p.}{structqgram__hash} \begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References qgram\_\-hash::positions.
+
+Referenced by main().\index{hash.h@{hash.h}!clear\_\-result\_\-hash@{clear\_\-result\_\-hash}}
+\index{clear\_\-result\_\-hash@{clear\_\-result\_\-hash}!hash.h@{hash.h}}
+\subsubsection[{clear\_\-result\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}void clear\_\-result\_\-hash (struct {\bf result\_\-hash} $\ast$ {\em results})}\label{hash_8h_ac05f3dcd25f0a46d76b3ee1c2b5f1f8}
+
+
+Clears and frees the \doxyref{result\_\-hash}{p.}{structresult__hash} \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em results}]reference to the hash to be cleared \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References result\_\-hash::direction\_\-and\_\-matching\_\-qgrams, and result\_\-hash::positions.
+
+Referenced by qgram\_\-to\_\-read\_\-mapping().\index{hash.h@{hash.h}!cuda\_\-queue\_\-check@{cuda\_\-queue\_\-check}}
+\index{cuda\_\-queue\_\-check@{cuda\_\-queue\_\-check}!hash.h@{hash.h}}
+\subsubsection[{cuda\_\-queue\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}void cuda\_\-queue\_\-check (int {\em mismatch}, \/  int {\em match}, \/  int {\em error}, \/  struct {\bf result\_\-hash} $\ast$ {\em results}, \/  unsigned int $\ast$ {\em alignment\_\-queue}, \/  int {\em do\_\-reverse})}\label{hash_8h_a489d343b1bbe74e6037800cd9fe80fa}
+
+
+Checks the number of alignments in queue and launches \doxyref{prepare\_\-cuda\_\-alignments}{p.}{hash_8h_3ed0f7323dd1de0536fb77dfda9f6f57} if the chunksize is reached \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em mismatch}]the mismatch costs \item[{\em match}]the match costs \item[{\em error}]maximal allowed error \item[{\em results}]the result hash for the correspondig thread \item[{\em alignment\_\-queue}]holds the number of alignments in queue \item[{\em do\_\-reverse}]determines the direction of this run \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References chunk\_\-value, and prepare\_\-cuda\_\-alignments().
+
+Referenced by run\_\-seashore().\index{hash.h@{hash.h}!perform\_\-hashtable\_\-identity\_\-check@{perform\_\-hashtable\_\-identity\_\-check}}
+\index{perform\_\-hashtable\_\-identity\_\-check@{perform\_\-hashtable\_\-identity\_\-check}!hash.h@{hash.h}}
+\subsubsection[{perform\_\-hashtable\_\-identity\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}short int perform\_\-hashtable\_\-identity\_\-check (void)}\label{hash_8h_fffa42098ca6d0bee3c1751532b9c5c5}
+
+
+Performs an self check of the \doxyref{qgram\_\-hash}{p.}{structqgram__hash} i.e. iterate over the hash and check each key for existence \begin{Desc}
+\item[Returns:]0 if check is passed, 1 otherwise \end{Desc}
+
+
+References qgram\_\-hash::hh, qgram\_\-hash::qgram, and qgram\_\-lookup().\index{hash.h@{hash.h}!prepare\_\-cuda\_\-alignments@{prepare\_\-cuda\_\-alignments}}
+\index{prepare\_\-cuda\_\-alignments@{prepare\_\-cuda\_\-alignments}!hash.h@{hash.h}}
+\subsubsection[{prepare\_\-cuda\_\-alignments}]{\setlength{\rightskip}{0pt plus 5cm}void prepare\_\-cuda\_\-alignments (int {\em mismatch}, \/  int {\em match}, \/  int {\em error}, \/  struct {\bf result\_\-hash} $\ast$ {\em results}, \/  unsigned int $\ast$ {\em alignment\_\-queue}, \/  int {\em do\_\-reverse})}\label{hash_8h_3ed0f7323dd1de0536fb77dfda9f6f57}
+
+
+Prepares and collects all necessary data for the CUDA alignment phase. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em mismatch}]the mismatch costs \item[{\em match}]the match costs \item[{\em error}]maximal allowed error \item[{\em results}]the result hash for the correspondig thread \item[{\em alignment\_\-queue}]holds the number of alignments in queue \item[{\em do\_\-reverse}]determines the direction of this run \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References bases\_\-read, chunk\_\-value, cuda\_\-needleman\_\-wunsch(), result\_\-hash::direction\_\-and\_\-matching\_\-qgrams, genome\_\-chunk\_\-run, genome\_\-chunk\_\-value, genome\_\-sequence, result\_\-hash::hh, result\_\-hash::next\_\-pos, result\_\-hash::positions, result\_\-hash::read\_\-id, read\_\-length\_\-value, reads, and reverse\_\-complement().
+
+Referenced by cuda\_\-queue\_\-check(), and qgram\_\-to\_\-read\_\-mapping().\index{hash.h@{hash.h}!print\_\-qgram\_\-index\_\-statistics@{print\_\-qgram\_\-index\_\-statistics}}
+\index{print\_\-qgram\_\-index\_\-statistics@{print\_\-qgram\_\-index\_\-statistics}!hash.h@{hash.h}}
+\subsubsection[{print\_\-qgram\_\-index\_\-statistics}]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-qgram\_\-index\_\-statistics (int {\em qgram\_\-size})}\label{hash_8h_3732f5d0f8f27b622aeabe80af0b2caf}
+
+
+Prints some statistics about the \doxyref{qgram\_\-hash}{p.}{structqgram__hash} \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em qgram\_\-size}]size of the used qgram \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References hash\_\-members, and pos\_\-counter.
+
+Referenced by main().\index{hash.h@{hash.h}!qgram\_\-lookup@{qgram\_\-lookup}}
+\index{qgram\_\-lookup@{qgram\_\-lookup}!hash.h@{hash.h}}
+\subsubsection[{qgram\_\-lookup}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf qgram\_\-hash}$\ast$ qgram\_\-lookup (char $\ast$ {\em qgram})\hspace{0.3cm}{\tt  [read]}}\label{hash_8h_c591312c125aba2ab99eeb1504d0060e}
+
+
+Performs a lookup in the qgram hash table. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em qgram}]qgram to look up \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a pointer to the struct if found, NULL pointer else. \end{Desc}
+
+
+Referenced by add\_\-qgram\_\-to\_\-index(), perform\_\-hashtable\_\-identity\_\-check(), and qgram\_\-to\_\-read\_\-mapping().\index{hash.h@{hash.h}!qgram\_\-to\_\-read\_\-mapping@{qgram\_\-to\_\-read\_\-mapping}}
+\index{qgram\_\-to\_\-read\_\-mapping@{qgram\_\-to\_\-read\_\-mapping}!hash.h@{hash.h}}
+\subsubsection[{qgram\_\-to\_\-read\_\-mapping}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ qgram\_\-to\_\-read\_\-mapping (void $\ast$ {\em threadarg})}\label{hash_8h_b70b2a94626edb70839b68a0035f6ae4}
+
+
+Tries to assign all needed qgrams for mapping to a each read \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em threadarg}]a struct holding all necessary information for the mapping and alignment phase \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+$<$ holds the number of alignments in queue to be aligned 
+
+References thread\_\-data::chunksize, clear\_\-result\_\-hash(), thread\_\-data::do\_\-reverse, thread\_\-data::error, qgram\_\-hash::next\_\-pos, thread\_\-data::number\_\-of\_\-start\_\-positions, qgram\_\-hash::positions, prepare\_\-cuda\_\-alignments(), thread\_\-data::qgram\_\-length, qgram\_\-length, qgram\_\-lookup(), thread\_\-data::qgram\_\-start\_\-positions, thread\_\-data::read\_\-array, thread\_\-data::read\_\-number, thread\_\-data::readlength, thread\_\-data::rest, results, reverse\_\-complement(), run\_\-seashore(), sw\_\-match\_\-value, and sw\_\-mismatch\_\-value.
+
+Referenced by main().\index{hash.h@{hash.h}!run\_\-seashore@{run\_\-seashore}}
+\index{run\_\-seashore@{run\_\-seashore}!hash.h@{hash.h}}
+\subsubsection[{run\_\-seashore}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf result\_\-hash}$\ast$ run\_\-seashore (int {\em chunksize}, \/  int {\em run}, \/  int {\em number\_\-of\_\-start\_\-positions}, \/  int {\em qgram\_\-length}, \/  int {\em error}, \/  int {\em rest}, \/  int {\em do\_\-reverse}, \/  unsigned int $\ast$ {\em data\_\-array}, \/  struct {\bf result\_\-hash} $\ast$ {\em results}, \/  unsigned int $\ast$ {\em alignment\_\-queue}, \/  unsigned int $\ast$ {\em data\_\-array\_\-offsets})\hspace{0.3cm}{\tt  [read]}}\label{hash_8h_58affc97e1885a680e3975a8f63840d3}
+
+
+Starts the SEASHORE mapping algorithm \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em chunksize}]number of reads to process in one run \item[{\em run}]number of the actual run \item[{\em number\_\-of\_\-start\_\-positions}]number of qgram start positions per read \item[{\em qgram\_\-length}]length of one qgram \item[{\em error}]maximal allowed error \item[{\em rest}]rest of the read after beeing cut into X qgrams \item[{\em do\_\-reverse}]determines the direction of this run \item[{\em data\_\-array}]array holding the qgram to read mapping \item[{\em results}]the result hash for the correspondig thread \item[{\em alignment\_\-queue}]holds the number of alignments in queue \item[{\em data\_\-array\_\-offsets}]start positions for each qgram's start positions \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References add\_\-start\_\-position(), cuda\_\-queue\_\-check(), exact\_\-tresh, forward\_\-output\_\-control, genome\_\-chunk\_\-run, genome\_\-chunk\_\-value, genome\_\-sequence, read\_\-name\_\-hash::name, print\_\-non\_\-matching\_\-reads, result\_\-hash::read\_\-id, read\_\-length\_\-value, read\_\-names, reads, reverse\_\-complement(), reverse\_\-output\_\-control, sw\_\-match\_\-value, and sw\_\-mismatch\_\-value.
+
+Referenced by qgram\_\-to\_\-read\_\-mapping().
+
+\subsection{Variable Documentation}
+\index{hash.h@{hash.h}!bases\_\-read@{bases\_\-read}}
+\index{bases\_\-read@{bases\_\-read}!hash.h@{hash.h}}
+\subsubsection[{bases\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf bases\_\-read}}\label{hash_8h_b572df0faf4b4c4664e8adc09f305482}
+
+
+
+
+Referenced by main(), and prepare\_\-cuda\_\-alignments().\index{hash.h@{hash.h}!chunk\_\-value@{chunk\_\-value}}
+\index{chunk\_\-value@{chunk\_\-value}!hash.h@{hash.h}}
+\subsubsection[{chunk\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf chunk\_\-value}}\label{hash_8h_0981f0fb32a249e501c5f87dbfaaf13f}
+
+
+holds the number of reads to be processed in one run 
+
+Referenced by check\_\-user\_\-input(), cuda\_\-queue\_\-check(), main(), and prepare\_\-cuda\_\-alignments().\index{hash.h@{hash.h}!exact\_\-tresh@{exact\_\-tresh}}
+\index{exact\_\-tresh@{exact\_\-tresh}!hash.h@{hash.h}}
+\subsubsection[{exact\_\-tresh}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf exact\_\-tresh}}\label{hash_8h_f36ba40fe509a366a36e5d3197d42857}
+
+
+
+
+Referenced by add\_\-start\_\-position(), main(), and run\_\-seashore().\index{hash.h@{hash.h}!forward\_\-output\_\-control@{forward\_\-output\_\-control}}
+\index{forward\_\-output\_\-control@{forward\_\-output\_\-control}!hash.h@{hash.h}}
+\subsubsection[{forward\_\-output\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf forward\_\-output\_\-control}}\label{hash_8h_a9bcc1c47ac7531838eb940e9fec11d6}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), main(), and run\_\-seashore().\index{hash.h@{hash.h}!genome\_\-chunk\_\-run@{genome\_\-chunk\_\-run}}
+\index{genome\_\-chunk\_\-run@{genome\_\-chunk\_\-run}!hash.h@{hash.h}}
+\subsubsection[{genome\_\-chunk\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf genome\_\-chunk\_\-run}}\label{hash_8h_ec3c87c657281aeef6d94cbbac6dba5a}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{hash.h@{hash.h}!genome\_\-sequence@{genome\_\-sequence}}
+\index{genome\_\-sequence@{genome\_\-sequence}!hash.h@{hash.h}}
+\subsubsection[{genome\_\-sequence}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf genome\_\-sequence}}\label{hash_8h_571c0bdece58dc19b6806fae78c2cfa6}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{hash.h@{hash.h}!hash\_\-members@{hash\_\-members}}
+\index{hash\_\-members@{hash\_\-members}!hash.h@{hash.h}}
+\subsubsection[{hash\_\-members}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf hash\_\-members}}\label{hash_8h_b422733930ea8ed28e22d06dac3b4499}
+
+
+number of reads in the result array aka mapped reads 
+
+Referenced by main(), and print\_\-qgram\_\-index\_\-statistics().\index{hash.h@{hash.h}!maximal\_\-errors\_\-allowed@{maximal\_\-errors\_\-allowed}}
+\index{maximal\_\-errors\_\-allowed@{maximal\_\-errors\_\-allowed}!hash.h@{hash.h}}
+\subsubsection[{maximal\_\-errors\_\-allowed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf maximal\_\-errors\_\-allowed}}\label{hash_8h_8036c9951f326930fb8da3f9eada65cb}
+
+
+
+
+Referenced by add\_\-start\_\-position(), main(), and read\_\-multiple\_\-fasta\_\-file().\index{hash.h@{hash.h}!pos\_\-counter@{pos\_\-counter}}
+\index{pos\_\-counter@{pos\_\-counter}!hash.h@{hash.h}}
+\subsubsection[{pos\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf pos\_\-counter}}\label{hash_8h_10cdca6d37ca0c018388bd095fda5576}
+
+
+counts number of start qgram start postions 
+
+Referenced by add\_\-qgram\_\-to\_\-index(), main(), and print\_\-qgram\_\-index\_\-statistics().\index{hash.h@{hash.h}!print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}}
+\index{print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}!hash.h@{hash.h}}
+\subsubsection[{print\_\-non\_\-matching\_\-reads}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf print\_\-non\_\-matching\_\-reads}}\label{hash_8h_a62460c85989c1db232083ed238caac4}
+
+
+print non matching reads 
+
+Referenced by check\_\-user\_\-input(), main(), and run\_\-seashore().\index{hash.h@{hash.h}!read\_\-length\_\-value@{read\_\-length\_\-value}}
+\index{read\_\-length\_\-value@{read\_\-length\_\-value}!hash.h@{hash.h}}
+\subsubsection[{read\_\-length\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf read\_\-length\_\-value}}\label{hash_8h_479a7d2a7ccfd26746c3831ea1d46afe}
+
+
+holds the length of each read in bp 
+
+Referenced by check\_\-user\_\-input(), main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{hash.h@{hash.h}!read\_\-names@{read\_\-names}}
+\index{read\_\-names@{read\_\-names}!hash.h@{hash.h}}
+\subsubsection[{read\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf read\_\-name\_\-hash}$\ast$ {\bf read\_\-names}}\label{hash_8h_0aa4bc36df5f7c54e3b8663dfd3b40ca}
+
+
+holds the results aka start positions in genome \index{hash.h@{hash.h}!reads@{reads}}
+\index{reads@{reads}!hash.h@{hash.h}}
+\subsubsection[{reads}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf reads}}\label{hash_8h_b223bee0f0147d30d97bc6e330554830}
+
+
+
+
+Referenced by main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{hash.h@{hash.h}!reverse\_\-output\_\-control@{reverse\_\-output\_\-control}}
+\index{reverse\_\-output\_\-control@{reverse\_\-output\_\-control}!hash.h@{hash.h}}
+\subsubsection[{reverse\_\-output\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf reverse\_\-output\_\-control}}\label{hash_8h_a587c410cb1f4288b1e9f7baca1cf5e3}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), main(), and run\_\-seashore().\index{hash.h@{hash.h}!sw\_\-match\_\-value@{sw\_\-match\_\-value}}
+\index{sw\_\-match\_\-value@{sw\_\-match\_\-value}!hash.h@{hash.h}}
+\subsubsection[{sw\_\-match\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-match\_\-value}}\label{hash_8h_1f93bbee2addec9da31597d83b7160c0}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input(), main(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().\index{hash.h@{hash.h}!sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}}
+\index{sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}!hash.h@{hash.h}}
+\subsubsection[{sw\_\-mismatch\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-mismatch\_\-value}}\label{hash_8h_064ce347753ae0707c1ff0cea06e6366}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input(), main(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().

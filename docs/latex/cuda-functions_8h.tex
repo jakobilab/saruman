@@ -1,0 +1,76 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.h File Reference}
+\label{cuda-functions_8h}\index{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.h@{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.h}}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf cuda\_\-needleman\_\-wunsch} (int match, int mismatch, char $\ast$genome\_\-sequences\_\-on\_\-host, char $\ast$read\_\-sequences\_\-on\_\-host, int $\ast$genome\_\-offsets, int $\ast$read\_\-offsets, int $\ast$edit\_\-offsets, int sample\_\-size, int $\ast$read\_\-id\_\-array, int $\ast$genome\_\-pos\_\-array, char $\ast$direction\_\-array, int error, size\_\-t total\_\-genome\_\-array\_\-size, size\_\-t total\_\-read\_\-sequence\_\-array\_\-size, size\_\-t total\_\-edit\_\-matrix\_\-size, int do\_\-reverse)
+\item 
+unsigned long {\bf get\_\-cuda\_\-infos} (void)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+struct {\bf result\_\-hash} $\ast$ {\bf results}
+\item 
+struct {\bf read\_\-name\_\-hash} $\ast$ {\bf read\_\-names}
+\item 
+unsigned short int {\bf be\_\-verbose\_\-value}
+\item 
+unsigned short int {\bf qgram\_\-length}
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cuda-functions.h@{cuda-functions.h}!cuda\_\-needleman\_\-wunsch@{cuda\_\-needleman\_\-wunsch}}
+\index{cuda\_\-needleman\_\-wunsch@{cuda\_\-needleman\_\-wunsch}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{cuda\_\-needleman\_\-wunsch}]{\setlength{\rightskip}{0pt plus 5cm}void cuda\_\-needleman\_\-wunsch (int {\em match}, \/  int {\em mismatch}, \/  char $\ast$ {\em genome\_\-sequences\_\-on\_\-host}, \/  char $\ast$ {\em read\_\-sequences\_\-on\_\-host}, \/  int $\ast$ {\em genome\_\-offsets}, \/  int $\ast$ {\em read\_\-offsets}, \/  int $\ast$ {\em edit\_\-offsets}, \/  int {\em sample\_\-size}, \/  int $\ast$ {\em read\_\-id\_\-array}, \/  int $\ast$ {\em genome\_\-pos\_\-array}, \/  char $\ast$ {\em direction\_\-array}, \/  int {\em error}, \/  size\_\-t {\em total\_\-genome\_\-array\_\-size}, \/  size\_\-t {\em total\_\-read\_\-sequence\_\-array\_\-size}, \/  size\_\-t {\em total\_\-edit\_\-matrix\_\-size}, \/  int {\em do\_\-reverse})}\label{cuda-functions_8h_814f4e20bf4cd93e1c67e63f4eebdb32}
+
+
+Wrapper functions which allows to call the CUDA implemented Smith-Waterman algorithm from other C files. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em match}]costs for a match \item[{\em mismatch}]costs for a mismatch \item[{\em genome\_\-sequences\_\-on\_\-host}]array of genome sequences \item[{\em read\_\-sequences\_\-on\_\-host}]array of read sequences \item[{\em genome\_\-offsets}]stop positions of each genome sequence in the genome array \item[{\em read\_\-offsets}]stop positions of each read sequence in the read array \item[{\em edit\_\-offsets}]stop positions of each edit matrix in the edit matrix array \item[{\em genome\_\-pos\_\-array}]start positions per read in the reference genome \item[{\em direction\_\-array}]holds the direction and matching qgram(s) of each hit \item[{\em error}]allowed error \item[{\em total\_\-genome\_\-array\_\-size}]total size of the genome array \item[{\em total\_\-read\_\-sequence\_\-array\_\-size}]total size of the read array $\ast$ \item[{\em total\_\-edit\_\-matrix\_\-size}]total size of the edit matrix array \item[{\em do\_\-reverse}]forward or reverse direction \item[{\em read\_\-id\_\-array}]hods the id of each read in the set \item[{\em sample\_\-size}]size of the sample arrays \end{description}
+\end{Desc}
+
+
+References alignment\_\-time, be\_\-verbose\_\-value, forward\_\-output\_\-control, read\_\-name\_\-hash::name, NR\_\-OF\_\-BLOCKS, read\_\-names, and reverse\_\-output\_\-control.
+
+Referenced by prepare\_\-cuda\_\-alignments().\index{cuda-functions.h@{cuda-functions.h}!get\_\-cuda\_\-infos@{get\_\-cuda\_\-infos}}
+\index{get\_\-cuda\_\-infos@{get\_\-cuda\_\-infos}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{get\_\-cuda\_\-infos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long get\_\-cuda\_\-infos (void)}\label{cuda-functions_8h_b90f77b7522c839cc4e828829764091a}
+
+
+Reverses a given char array \begin{Desc}
+\item[Returns:]amount of available CUDA memory in bytes \end{Desc}
+
+
+\subsection{Variable Documentation}
+\index{cuda-functions.h@{cuda-functions.h}!be\_\-verbose\_\-value@{be\_\-verbose\_\-value}}
+\index{be\_\-verbose\_\-value@{be\_\-verbose\_\-value}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{be\_\-verbose\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf be\_\-verbose\_\-value}}\label{cuda-functions_8h_e87ca0c58972a2f744b0fcbb8387cf2e}
+
+
+generates more detailed output 
+
+Referenced by check\_\-user\_\-input(), and cuda\_\-needleman\_\-wunsch().\index{cuda-functions.h@{cuda-functions.h}!qgram\_\-length@{qgram\_\-length}}
+\index{qgram\_\-length@{qgram\_\-length}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{qgram\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf qgram\_\-length}}\label{cuda-functions_8h_dca41ef662c3741c7e78c3afc8fb52ec}
+
+
+
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{cuda-functions.h@{cuda-functions.h}!read\_\-names@{read\_\-names}}
+\index{read\_\-names@{read\_\-names}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{read\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf read\_\-name\_\-hash}$\ast$ {\bf read\_\-names}}\label{cuda-functions_8h_0aa4bc36df5f7c54e3b8663dfd3b40ca}
+
+
+holds the results aka start positions in genome 
+
+Referenced by clear\_\-name\_\-hash(), cuda\_\-needleman\_\-wunsch(), main(), read\_\-multiple\_\-fasta\_\-file(), and run\_\-seashore().\index{cuda-functions.h@{cuda-functions.h}!results@{results}}
+\index{results@{results}!cuda-functions.h@{cuda-functions.h}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf result\_\-hash}$\ast$ {\bf results}}\label{cuda-functions_8h_e16708cde6a9a3d6c5432b4f1bf701d0}
+
+
+
+
+Referenced by qgram\_\-to\_\-read\_\-mapping().

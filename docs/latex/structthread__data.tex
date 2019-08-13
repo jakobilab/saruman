@@ -1,0 +1,113 @@
+\section{thread\_\-data Struct Reference}
+\label{structthread__data}\index{thread\_\-data@{thread\_\-data}}
+work around struct for passing multiple arguments with pthread  
+
+
+{\tt \#include $<$saruman.h$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+char $\ast$ {\bf read\_\-array}
+\item 
+unsigned short int {\bf readlength}
+\item 
+unsigned short int $\ast$ {\bf qgram\_\-start\_\-positions}
+\item 
+unsigned short int {\bf number\_\-of\_\-start\_\-positions}
+\item 
+unsigned short int {\bf qgram\_\-length}
+\item 
+unsigned short int {\bf rest}
+\item 
+unsigned short int {\bf do\_\-reverse}
+\item 
+int {\bf read\_\-number}
+\item 
+int {\bf error}
+\item 
+int {\bf chunksize}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+work around struct for passing multiple arguments with pthread 
+
+A structure needed to pass multiple arguments to the \doxyref{qgram\_\-to\_\-read\_\-mapping}{p.}{hash_8h_b70b2a94626edb70839b68a0035f6ae4} function called through pthread\_\-start 
+
+\subsection{Field Documentation}
+\index{thread\_\-data@{thread\_\-data}!chunksize@{chunksize}}
+\index{chunksize@{chunksize}!thread_data@{thread\_\-data}}
+\subsubsection[{chunksize}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf thread\_\-data::chunksize}}\label{structthread__data_88ba66545028664699cd8d22da505638}
+
+
+holds the chunksize 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!do\_\-reverse@{do\_\-reverse}}
+\index{do\_\-reverse@{do\_\-reverse}!thread_data@{thread\_\-data}}
+\subsubsection[{do\_\-reverse}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf thread\_\-data::do\_\-reverse}}\label{structthread__data_16389f237c5b1cfe0e6330f83d281c06}
+
+
+holds the direction 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!error@{error}}
+\index{error@{error}!thread_data@{thread\_\-data}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf thread\_\-data::error}}\label{structthread__data_336acb79f92fd6710e7b4fe0bfdcf585}
+
+
+holds the maximal allowed error 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!number\_\-of\_\-start\_\-positions@{number\_\-of\_\-start\_\-positions}}
+\index{number\_\-of\_\-start\_\-positions@{number\_\-of\_\-start\_\-positions}!thread_data@{thread\_\-data}}
+\subsubsection[{number\_\-of\_\-start\_\-positions}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf thread\_\-data::number\_\-of\_\-start\_\-positions}}\label{structthread__data_2e295790e762b84097eb54ccaf0f0cd7}
+
+
+holds the number of qgrams per read 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!qgram\_\-length@{qgram\_\-length}}
+\index{qgram\_\-length@{qgram\_\-length}!thread_data@{thread\_\-data}}
+\subsubsection[{qgram\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf thread\_\-data::qgram\_\-length}}\label{structthread__data_123c9c7b6aaebe676e34361748c27b04}
+
+
+holds the qgram length 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!qgram\_\-start\_\-positions@{qgram\_\-start\_\-positions}}
+\index{qgram\_\-start\_\-positions@{qgram\_\-start\_\-positions}!thread_data@{thread\_\-data}}
+\subsubsection[{qgram\_\-start\_\-positions}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int$\ast$ {\bf thread\_\-data::qgram\_\-start\_\-positions}}\label{structthread__data_28d83663c5ab1cc7a0c3a2fa616a6bb4}
+
+
+holds the qgram start positions in the read 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!read\_\-array@{read\_\-array}}
+\index{read\_\-array@{read\_\-array}!thread_data@{thread\_\-data}}
+\subsubsection[{read\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf thread\_\-data::read\_\-array}}\label{structthread__data_77b46085d63232e28b5aa991cb2c7449}
+
+
+array holding the reads for this thread 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!read\_\-number@{read\_\-number}}
+\index{read\_\-number@{read\_\-number}!thread_data@{thread\_\-data}}
+\subsubsection[{read\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf thread\_\-data::read\_\-number}}\label{structthread__data_b89b0a83628aaed59a3d2945529d8a78}
+
+
+holds number of reads to process per run 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!readlength@{readlength}}
+\index{readlength@{readlength}!thread_data@{thread\_\-data}}
+\subsubsection[{readlength}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf thread\_\-data::readlength}}\label{structthread__data_adeb070875234455d400bc6b4bd04ec6}
+
+
+holds the read length 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().\index{thread\_\-data@{thread\_\-data}!rest@{rest}}
+\index{rest@{rest}!thread_data@{thread\_\-data}}
+\subsubsection[{rest}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf thread\_\-data::rest}}\label{structthread__data_a90b6ac318fd0fac274038e2bac1a0e3}
+
+
+holds the lenth of the overhang of the qgrams and the reads 
+
+Referenced by main(), and qgram\_\-to\_\-read\_\-mapping().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+/home/tobias/work/SunStudioProjects/saruman/src/{\bf saruman.h}\end{CompactItemize}

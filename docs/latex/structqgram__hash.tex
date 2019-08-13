@@ -1,0 +1,59 @@
+\section{qgram\_\-hash Struct Reference}
+\label{structqgram__hash}\index{qgram\_\-hash@{qgram\_\-hash}}
+a structure needed to built a hash index of qgram start positions  
+
+
+{\tt \#include $<$hash.h$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+char {\bf qgram} [20]
+\item 
+unsigned short int {\bf next\_\-pos}
+\item 
+unsigned int $\ast$ {\bf positions}
+\item 
+UT\_\-hash\_\-handle {\bf hh}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+a structure needed to built a hash index of qgram start positions 
+
+A structure needed to built a hash index of qgram start positions 
+
+\subsection{Field Documentation}
+\index{qgram\_\-hash@{qgram\_\-hash}!hh@{hh}}
+\index{hh@{hh}!qgram_hash@{qgram\_\-hash}}
+\subsubsection[{hh}]{\setlength{\rightskip}{0pt plus 5cm}UT\_\-hash\_\-handle {\bf qgram\_\-hash::hh}}\label{structqgram__hash_b956d162358231b4d70cf60e3905c016}
+
+
+makes this structure hashable 
+
+Referenced by perform\_\-hashtable\_\-identity\_\-check().\index{qgram\_\-hash@{qgram\_\-hash}!next\_\-pos@{next\_\-pos}}
+\index{next\_\-pos@{next\_\-pos}!qgram_hash@{qgram\_\-hash}}
+\subsubsection[{next\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf qgram\_\-hash::next\_\-pos}}\label{structqgram__hash_1b436254bc70221a4fabd1557889e8d0}
+
+
+next position in the following postions array 
+
+Referenced by add\_\-qgram\_\-to\_\-index(), and qgram\_\-to\_\-read\_\-mapping().\index{qgram\_\-hash@{qgram\_\-hash}!positions@{positions}}
+\index{positions@{positions}!qgram_hash@{qgram\_\-hash}}
+\subsubsection[{positions}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int$\ast$ {\bf qgram\_\-hash::positions}}\label{structqgram__hash_761579dabe3671fd68c446e6b75955ea}
+
+
+holds the start positions of this qgram in the genome - dynamicly resized 
+
+Referenced by add\_\-qgram\_\-to\_\-index(), clear\_\-qgram\_\-index(), and qgram\_\-to\_\-read\_\-mapping().\index{qgram\_\-hash@{qgram\_\-hash}!qgram@{qgram}}
+\index{qgram@{qgram}!qgram_hash@{qgram\_\-hash}}
+\subsubsection[{qgram}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf qgram\_\-hash::qgram}[20]}\label{structqgram__hash_7c72b4c67544b3ee27c711af9a2dd27c}
+
+
+{\bf KEY:} unique qgram, hardcoded maximal qgram size 
+
+Referenced by add\_\-qgram\_\-to\_\-index(), and perform\_\-hashtable\_\-identity\_\-check().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+/home/tobias/work/SunStudioProjects/saruman/src/{\bf hash.h}\end{CompactItemize}

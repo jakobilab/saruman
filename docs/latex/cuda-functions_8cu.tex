@@ -1,0 +1,125 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.cu File Reference}
+\label{cuda-functions_8cu}\index{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.cu@{/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.cu}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$assert.h$>$}\par
+{\tt \#include $<$unistd.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$argtable2.h$>$}\par
+{\tt \#include $<$pthread.h$>$}\par
+{\tt \#include $<$cuda.h$>$}\par
+{\tt \#include $<$cutil.h$>$}\par
+{\tt \#include \char`\"{}util.h\char`\"{}}\par
+{\tt \#include \char`\"{}saruman.h\char`\"{}}\par
+{\tt \#include \char`\"{}hash.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf SWAP\_\-CHAR}(x, y)~\{char c; c = x; x = y; y = c;\}
+\item 
+\#define {\bf NR\_\-OF\_\-BLOCKS}~5
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+\_\-\_\-device\_\-\_\- void {\bf reverse\_\-sequence} (char $\ast$sequence, int sequence\_\-length)
+\item 
+\_\-\_\-device\_\-\_\- short int {\bf minimize} (short int a, short int b, short int c)
+\item 
+\_\-\_\-device\_\-\_\- void {\bf get\_\-alignment} (int match, int mismatch, char $\ast$read\_\-sequences, char $\ast$genome\_\-sequences, char $\ast$read\_\-alignments, char $\ast$genome\_\-alignments, short int $\ast$edit\_\-matrices\_\-on\_\-device\_\-gpu, int max\_\-position, int edit\_\-matrix\_\-start, int read\_\-sequence\_\-length, int read\_\-start, int genome\_\-start, int genome\_\-sequence\_\-length, int error, int end\_\-offset, int start\_\-offset, int threadID)
+\item 
+\_\-\_\-global\_\-\_\- void {\bf compute\_\-score} (int match, int mismatch, char $\ast$read\_\-sequences, char $\ast$genome\_\-sequences, int $\ast$read\_\-offsets, int $\ast$genome\_\-offsets, char $\ast$read\_\-alignments, char $\ast$genome\_\-alignments, int sample\_\-size, short int $\ast$edit\_\-matrices\_\-on\_\-device\_\-gpu, int $\ast$edit\_\-offsets, int $\ast$device\_\-score\_\-array, char $\ast$direction\_\-array, int error)
+\item 
+void {\bf cuda\_\-needleman\_\-wunsch} (int match, int mismatch, char $\ast$genome\_\-sequences\_\-on\_\-host, char $\ast$read\_\-sequences\_\-on\_\-host, int $\ast$genome\_\-offsets, int $\ast$read\_\-offsets, int $\ast$edit\_\-offsets, int sample\_\-size, int $\ast$read\_\-id\_\-array, int $\ast$genome\_\-pos\_\-array, char $\ast$direction\_\-array, int error, size\_\-t total\_\-genome\_\-sequence\_\-array\_\-size, size\_\-t total\_\-read\_\-sequence\_\-array\_\-size, size\_\-t total\_\-edit\_\-matrix\_\-size, int do\_\-reverse)
+\item 
+unsigned long {\bf get\_\-cuda\_\-infos} (void)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+float {\bf alignment\_\-time} [2]
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{cuda-functions.cu@{cuda-functions.cu}!NR\_\-OF\_\-BLOCKS@{NR\_\-OF\_\-BLOCKS}}
+\index{NR\_\-OF\_\-BLOCKS@{NR\_\-OF\_\-BLOCKS}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{NR\_\-OF\_\-BLOCKS}]{\setlength{\rightskip}{0pt plus 5cm}\#define NR\_\-OF\_\-BLOCKS~5}\label{cuda-functions_8cu_136296bef301022e13da8023bdb266e3}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch().\index{cuda-functions.cu@{cuda-functions.cu}!SWAP\_\-CHAR@{SWAP\_\-CHAR}}
+\index{SWAP\_\-CHAR@{SWAP\_\-CHAR}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{SWAP\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SWAP\_\-CHAR(x, \/  y)~\{char c; c = x; x = y; y = c;\}}\label{cuda-functions_8cu_095f50fa15c6a279dd92d579f21e1cd1}
+
+
+Swaps the chars {\em x\/} and {\em y\/}. 
+
+Referenced by reverse(), and reverse\_\-sequence().
+
+\subsection{Function Documentation}
+\index{cuda-functions.cu@{cuda-functions.cu}!compute\_\-score@{compute\_\-score}}
+\index{compute\_\-score@{compute\_\-score}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{compute\_\-score}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-global\_\-\_\- void compute\_\-score (int {\em match}, \/  int {\em mismatch}, \/  char $\ast$ {\em read\_\-sequences}, \/  char $\ast$ {\em genome\_\-sequences}, \/  int $\ast$ {\em read\_\-offsets}, \/  int $\ast$ {\em genome\_\-offsets}, \/  char $\ast$ {\em read\_\-alignments}, \/  char $\ast$ {\em genome\_\-alignments}, \/  int {\em sample\_\-size}, \/  short int $\ast$ {\em edit\_\-matrices\_\-on\_\-device\_\-gpu}, \/  int $\ast$ {\em edit\_\-offsets}, \/  int $\ast$ {\em device\_\-score\_\-array}, \/  char $\ast$ {\em direction\_\-array}, \/  int {\em error})}\label{cuda-functions_8cu_109ef3a0d8dfe9814e83e068caf0b618}
+
+
+
+
+References get\_\-alignment(), and minimize().\index{cuda-functions.cu@{cuda-functions.cu}!cuda\_\-needleman\_\-wunsch@{cuda\_\-needleman\_\-wunsch}}
+\index{cuda\_\-needleman\_\-wunsch@{cuda\_\-needleman\_\-wunsch}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{cuda\_\-needleman\_\-wunsch}]{\setlength{\rightskip}{0pt plus 5cm}void cuda\_\-needleman\_\-wunsch (int {\em match}, \/  int {\em mismatch}, \/  char $\ast$ {\em genome\_\-sequences\_\-on\_\-host}, \/  char $\ast$ {\em read\_\-sequences\_\-on\_\-host}, \/  int $\ast$ {\em genome\_\-offsets}, \/  int $\ast$ {\em read\_\-offsets}, \/  int $\ast$ {\em edit\_\-offsets}, \/  int {\em sample\_\-size}, \/  int $\ast$ {\em read\_\-id\_\-array}, \/  int $\ast$ {\em genome\_\-pos\_\-array}, \/  char $\ast$ {\em direction\_\-array}, \/  int {\em error}, \/  size\_\-t {\em total\_\-genome\_\-array\_\-size}, \/  size\_\-t {\em total\_\-read\_\-sequence\_\-array\_\-size}, \/  size\_\-t {\em total\_\-edit\_\-matrix\_\-size}, \/  int {\em do\_\-reverse})}\label{cuda-functions_8cu_1bfc988c46a591bd7c9ce6e26b45f2d0}
+
+
+Wrapper functions which allows to call the CUDA implemented Smith-Waterman algorithm from other C files. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em match}]costs for a match \item[{\em mismatch}]costs for a mismatch \item[{\em genome\_\-sequences\_\-on\_\-host}]array of genome sequences \item[{\em read\_\-sequences\_\-on\_\-host}]array of read sequences \item[{\em genome\_\-offsets}]stop positions of each genome sequence in the genome array \item[{\em read\_\-offsets}]stop positions of each read sequence in the read array \item[{\em edit\_\-offsets}]stop positions of each edit matrix in the edit matrix array \item[{\em genome\_\-pos\_\-array}]start positions per read in the reference genome \item[{\em direction\_\-array}]holds the direction and matching qgram(s) of each hit \item[{\em error}]allowed error \item[{\em total\_\-genome\_\-array\_\-size}]total size of the genome array \item[{\em total\_\-read\_\-sequence\_\-array\_\-size}]total size of the read array $\ast$ \item[{\em total\_\-edit\_\-matrix\_\-size}]total size of the edit matrix array \item[{\em do\_\-reverse}]forward or reverse direction \item[{\em read\_\-id\_\-array}]hods the id of each read in the set \item[{\em sample\_\-size}]size of the sample arrays \end{description}
+\end{Desc}
+
+
+References alignment\_\-time, be\_\-verbose\_\-value, forward\_\-output\_\-control, read\_\-name\_\-hash::name, NR\_\-OF\_\-BLOCKS, read\_\-names, and reverse\_\-output\_\-control.
+
+Referenced by prepare\_\-cuda\_\-alignments().\index{cuda-functions.cu@{cuda-functions.cu}!get\_\-alignment@{get\_\-alignment}}
+\index{get\_\-alignment@{get\_\-alignment}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{get\_\-alignment}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-device\_\-\_\- void get\_\-alignment (int {\em match}, \/  int {\em mismatch}, \/  char $\ast$ {\em read\_\-sequences}, \/  char $\ast$ {\em genome\_\-sequences}, \/  char $\ast$ {\em read\_\-alignments}, \/  char $\ast$ {\em genome\_\-alignments}, \/  short int $\ast$ {\em edit\_\-matrices\_\-on\_\-device\_\-gpu}, \/  int {\em max\_\-position}, \/  int {\em edit\_\-matrix\_\-start}, \/  int {\em read\_\-sequence\_\-length}, \/  int {\em read\_\-start}, \/  int {\em genome\_\-start}, \/  int {\em genome\_\-sequence\_\-length}, \/  int {\em error}, \/  int {\em end\_\-offset}, \/  int {\em start\_\-offset}, \/  int {\em threadID})}\label{cuda-functions_8cu_b3260d9455dbbf368a170cf2f0126f03}
+
+
+
+
+References reverse\_\-sequence().
+
+Referenced by compute\_\-score().\index{cuda-functions.cu@{cuda-functions.cu}!get\_\-cuda\_\-infos@{get\_\-cuda\_\-infos}}
+\index{get\_\-cuda\_\-infos@{get\_\-cuda\_\-infos}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{get\_\-cuda\_\-infos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long get\_\-cuda\_\-infos (void)}\label{cuda-functions_8cu_b90f77b7522c839cc4e828829764091a}
+
+
+Reverses a given char array \begin{Desc}
+\item[Returns:]amount of available CUDA memory in bytes \end{Desc}
+\index{cuda-functions.cu@{cuda-functions.cu}!minimize@{minimize}}
+\index{minimize@{minimize}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{minimize}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-device\_\-\_\- short int minimize (short int {\em a}, \/  short int {\em b}, \/  short int {\em c})}\label{cuda-functions_8cu_89caa6813a2ac22973f3429b60d28efa}
+
+
+
+
+Referenced by compute\_\-score().\index{cuda-functions.cu@{cuda-functions.cu}!reverse\_\-sequence@{reverse\_\-sequence}}
+\index{reverse\_\-sequence@{reverse\_\-sequence}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{reverse\_\-sequence}]{\setlength{\rightskip}{0pt plus 5cm}\_\-\_\-device\_\-\_\- void reverse\_\-sequence (char $\ast$ {\em sequence}, \/  int {\em sequence\_\-length})}\label{cuda-functions_8cu_3da22060780f4eba2554d4c92a2ad9ec}
+
+
+
+
+References SWAP\_\-CHAR.
+
+Referenced by get\_\-alignment().
+
+\subsection{Variable Documentation}
+\index{cuda-functions.cu@{cuda-functions.cu}!alignment\_\-time@{alignment\_\-time}}
+\index{alignment\_\-time@{alignment\_\-time}!cuda-functions.cu@{cuda-functions.cu}}
+\subsubsection[{alignment\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf alignment\_\-time}[2]}\label{cuda-functions_8cu_3d68a18b54886db326f17f526cc30d29}
+
+
+
+
+Referenced by cuda\_\-needleman\_\-wunsch(), and main().

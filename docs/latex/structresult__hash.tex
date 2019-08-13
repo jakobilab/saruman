@@ -1,0 +1,76 @@
+\section{result\_\-hash Struct Reference}
+\label{structresult__hash}\index{result\_\-hash@{result\_\-hash}}
+a structure needed to built a hash index of mapped reads  
+
+
+{\tt \#include $<$hash.h$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+unsigned int {\bf read\_\-id}
+\item 
+unsigned short int {\bf next\_\-pos}
+\item 
+int $\ast$ {\bf positions}
+\item 
+char $\ast$ {\bf direction\_\-and\_\-matching\_\-qgrams}
+\item 
+UT\_\-hash\_\-handle {\bf hh}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+a structure needed to built a hash index of mapped reads 
+
+A structure needed to built a hash index of mapped reads 
+
+\subsection{Field Documentation}
+\index{result\_\-hash@{result\_\-hash}!direction\_\-and\_\-matching\_\-qgrams@{direction\_\-and\_\-matching\_\-qgrams}}
+\index{direction\_\-and\_\-matching\_\-qgrams@{direction\_\-and\_\-matching\_\-qgrams}!result_hash@{result\_\-hash}}
+\subsubsection[{direction\_\-and\_\-matching\_\-qgrams}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf result\_\-hash::direction\_\-and\_\-matching\_\-qgrams}}\label{structresult__hash_c518b7f3335ab4784924bfe341108d81}
+
+
+holds the direction of this hit together with the matching qgrams:\par
+ 0:forward, start and end qgram match\par
+ 1:forward, start qgram match\par
+ 2:forward, end qgram match\par
+ 3:forward, neither start or end match\par
+ 4:reverse, start and end qgram match\par
+ 5:reverse, start qgram match\par
+ 6:reverse, end qgram match\par
+ 7:reverse, neither start or end match 
+
+Referenced by add\_\-start\_\-position(), clear\_\-result\_\-hash(), and prepare\_\-cuda\_\-alignments().\index{result\_\-hash@{result\_\-hash}!hh@{hh}}
+\index{hh@{hh}!result_hash@{result\_\-hash}}
+\subsubsection[{hh}]{\setlength{\rightskip}{0pt plus 5cm}UT\_\-hash\_\-handle {\bf result\_\-hash::hh}}\label{structresult__hash_b6e5ade0cc7cd2abec450b24a3d8de76}
+
+
+makes this structure hashable 
+
+Referenced by prepare\_\-cuda\_\-alignments().\index{result\_\-hash@{result\_\-hash}!next\_\-pos@{next\_\-pos}}
+\index{next\_\-pos@{next\_\-pos}!result_hash@{result\_\-hash}}
+\subsubsection[{next\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf result\_\-hash::next\_\-pos}}\label{structresult__hash_0e36c05be17e1b406af4f2699285757c}
+
+
+next position in the following postions array 
+
+Referenced by add\_\-start\_\-position(), and prepare\_\-cuda\_\-alignments().\index{result\_\-hash@{result\_\-hash}!positions@{positions}}
+\index{positions@{positions}!result_hash@{result\_\-hash}}
+\subsubsection[{positions}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf result\_\-hash::positions}}\label{structresult__hash_c3dadbd5d4030ddf8dc5d955c10e53c1}
+
+
+holds the unique start positions of this read in the genome - dynamicly resized 
+
+Referenced by add\_\-start\_\-position(), clear\_\-result\_\-hash(), and prepare\_\-cuda\_\-alignments().\index{result\_\-hash@{result\_\-hash}!read\_\-id@{read\_\-id}}
+\index{read\_\-id@{read\_\-id}!result_hash@{result\_\-hash}}
+\subsubsection[{read\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf result\_\-hash::read\_\-id}}\label{structresult__hash_9215cd565c40433c535c92f43eb775bd}
+
+
+{\bf KEY:} (unique) number of the read 
+
+Referenced by add\_\-start\_\-position(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+/home/tobias/work/SunStudioProjects/saruman/src/{\bf hash.h}\end{CompactItemize}

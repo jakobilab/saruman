@@ -1,0 +1,48 @@
+\section{read\_\-name\_\-hash Struct Reference}
+\label{structread__name__hash}\index{read\_\-name\_\-hash@{read\_\-name\_\-hash}}
+a structure needed to built a hash index which maps a read id to a human readable name  
+
+
+{\tt \#include $<$util.h$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+int {\bf read\_\-number}
+\item 
+char {\bf name} [MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH]
+\item 
+UT\_\-hash\_\-handle {\bf hh}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+a structure needed to built a hash index which maps a read id to a human readable name 
+
+A structure needed to built a hash index which maps a read id to a human readable name 
+
+\subsection{Field Documentation}
+\index{read\_\-name\_\-hash@{read\_\-name\_\-hash}!hh@{hh}}
+\index{hh@{hh}!read_name_hash@{read\_\-name\_\-hash}}
+\subsubsection[{hh}]{\setlength{\rightskip}{0pt plus 5cm}UT\_\-hash\_\-handle {\bf read\_\-name\_\-hash::hh}}\label{structread__name__hash_e0678fc20a5ee49195a9095987bdc90c}
+
+
+makes this structure hashable \index{read\_\-name\_\-hash@{read\_\-name\_\-hash}!name@{name}}
+\index{name@{name}!read_name_hash@{read\_\-name\_\-hash}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf read\_\-name\_\-hash::name}[MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH]}\label{structread__name__hash_34080c435db710a4ab9d859f7e402429}
+
+
+holds the name of this read 
+
+Referenced by cuda\_\-needleman\_\-wunsch(), main(), read\_\-multiple\_\-fasta\_\-file(), and run\_\-seashore().\index{read\_\-name\_\-hash@{read\_\-name\_\-hash}!read\_\-number@{read\_\-number}}
+\index{read\_\-number@{read\_\-number}!read_name_hash@{read\_\-name\_\-hash}}
+\subsubsection[{read\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf read\_\-name\_\-hash::read\_\-number}}\label{structread__name__hash_b7c28c171cc440ed3649bfcdc14e9064}
+
+
+{\bf KEY:} (unique) number of the read 
+
+Referenced by read\_\-multiple\_\-fasta\_\-file().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+/home/tobias/work/SunStudioProjects/saruman/src/{\bf util.h}\end{CompactItemize}

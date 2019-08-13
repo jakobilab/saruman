@@ -1,0 +1,183 @@
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}
+\contentsline {section}{\numberline {1.1}Data Structures}{1}
+\contentsline {chapter}{\numberline {2}File Index}{3}
+\contentsline {section}{\numberline {2.1}File List}{3}
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}
+\contentsline {section}{\numberline {3.1}qgram\_\discretionary {-}{}{}hash Struct Reference}{5}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}
+\contentsline {subsection}{\numberline {3.1.2}Field Documentation}{5}
+\contentsline {subsubsection}{\numberline {3.1.2.1}hh}{5}
+\contentsline {subsubsection}{\numberline {3.1.2.2}next\_\discretionary {-}{}{}pos}{5}
+\contentsline {subsubsection}{\numberline {3.1.2.3}positions}{6}
+\contentsline {subsubsection}{\numberline {3.1.2.4}qgram}{6}
+\contentsline {section}{\numberline {3.2}read\_\discretionary {-}{}{}name\_\discretionary {-}{}{}hash Struct Reference}{7}
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{7}
+\contentsline {subsection}{\numberline {3.2.2}Field Documentation}{7}
+\contentsline {subsubsection}{\numberline {3.2.2.1}hh}{7}
+\contentsline {subsubsection}{\numberline {3.2.2.2}name}{7}
+\contentsline {subsubsection}{\numberline {3.2.2.3}read\_\discretionary {-}{}{}number}{7}
+\contentsline {section}{\numberline {3.3}result\_\discretionary {-}{}{}hash Struct Reference}{8}
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{8}
+\contentsline {subsection}{\numberline {3.3.2}Field Documentation}{8}
+\contentsline {subsubsection}{\numberline {3.3.2.1}direction\_\discretionary {-}{}{}and\_\discretionary {-}{}{}matching\_\discretionary {-}{}{}qgrams}{8}
+\contentsline {subsubsection}{\numberline {3.3.2.2}hh}{8}
+\contentsline {subsubsection}{\numberline {3.3.2.3}next\_\discretionary {-}{}{}pos}{8}
+\contentsline {subsubsection}{\numberline {3.3.2.4}positions}{9}
+\contentsline {subsubsection}{\numberline {3.3.2.5}read\_\discretionary {-}{}{}id}{9}
+\contentsline {section}{\numberline {3.4}thread\_\discretionary {-}{}{}data Struct Reference}{10}
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{10}
+\contentsline {subsection}{\numberline {3.4.2}Field Documentation}{10}
+\contentsline {subsubsection}{\numberline {3.4.2.1}chunksize}{10}
+\contentsline {subsubsection}{\numberline {3.4.2.2}do\_\discretionary {-}{}{}reverse}{10}
+\contentsline {subsubsection}{\numberline {3.4.2.3}error}{10}
+\contentsline {subsubsection}{\numberline {3.4.2.4}number\_\discretionary {-}{}{}of\_\discretionary {-}{}{}start\_\discretionary {-}{}{}positions}{10}
+\contentsline {subsubsection}{\numberline {3.4.2.5}qgram\_\discretionary {-}{}{}length}{11}
+\contentsline {subsubsection}{\numberline {3.4.2.6}qgram\_\discretionary {-}{}{}start\_\discretionary {-}{}{}positions}{11}
+\contentsline {subsubsection}{\numberline {3.4.2.7}read\_\discretionary {-}{}{}array}{11}
+\contentsline {subsubsection}{\numberline {3.4.2.8}read\_\discretionary {-}{}{}number}{11}
+\contentsline {subsubsection}{\numberline {3.4.2.9}readlength}{11}
+\contentsline {subsubsection}{\numberline {3.4.2.10}rest}{11}
+\contentsline {chapter}{\numberline {4}File Documentation}{13}
+\contentsline {section}{\numberline {4.1}/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.cu File Reference}{13}
+\contentsline {subsection}{\numberline {4.1.1}Define Documentation}{14}
+\contentsline {subsubsection}{\numberline {4.1.1.1}NR\_\discretionary {-}{}{}OF\_\discretionary {-}{}{}BLOCKS}{14}
+\contentsline {subsubsection}{\numberline {4.1.1.2}SWAP\_\discretionary {-}{}{}CHAR}{14}
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{14}
+\contentsline {subsubsection}{\numberline {4.1.2.1}compute\_\discretionary {-}{}{}score}{14}
+\contentsline {subsubsection}{\numberline {4.1.2.2}cuda\_\discretionary {-}{}{}needleman\_\discretionary {-}{}{}wunsch}{14}
+\contentsline {subsubsection}{\numberline {4.1.2.3}get\_\discretionary {-}{}{}alignment}{15}
+\contentsline {subsubsection}{\numberline {4.1.2.4}get\_\discretionary {-}{}{}cuda\_\discretionary {-}{}{}infos}{15}
+\contentsline {subsubsection}{\numberline {4.1.2.5}minimize}{15}
+\contentsline {subsubsection}{\numberline {4.1.2.6}reverse\_\discretionary {-}{}{}sequence}{16}
+\contentsline {subsection}{\numberline {4.1.3}Variable Documentation}{16}
+\contentsline {subsubsection}{\numberline {4.1.3.1}alignment\_\discretionary {-}{}{}time}{16}
+\contentsline {section}{\numberline {4.2}/home/tobias/work/SunStudioProjects/saruman/src/cuda-functions.h File Reference}{17}
+\contentsline {subsection}{\numberline {4.2.1}Function Documentation}{17}
+\contentsline {subsubsection}{\numberline {4.2.1.1}cuda\_\discretionary {-}{}{}needleman\_\discretionary {-}{}{}wunsch}{17}
+\contentsline {subsubsection}{\numberline {4.2.1.2}get\_\discretionary {-}{}{}cuda\_\discretionary {-}{}{}infos}{18}
+\contentsline {subsection}{\numberline {4.2.2}Variable Documentation}{18}
+\contentsline {subsubsection}{\numberline {4.2.2.1}be\_\discretionary {-}{}{}verbose\_\discretionary {-}{}{}value}{18}
+\contentsline {subsubsection}{\numberline {4.2.2.2}qgram\_\discretionary {-}{}{}length}{18}
+\contentsline {subsubsection}{\numberline {4.2.2.3}read\_\discretionary {-}{}{}names}{18}
+\contentsline {subsubsection}{\numberline {4.2.2.4}results}{18}
+\contentsline {section}{\numberline {4.3}/home/tobias/work/SunStudioProjects/saruman/src/hash.c File Reference}{19}
+\contentsline {subsection}{\numberline {4.3.1}Function Documentation}{19}
+\contentsline {subsubsection}{\numberline {4.3.1.1}add\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}to\_\discretionary {-}{}{}index}{19}
+\contentsline {subsubsection}{\numberline {4.3.1.2}add\_\discretionary {-}{}{}start\_\discretionary {-}{}{}position}{20}
+\contentsline {subsubsection}{\numberline {4.3.1.3}clear\_\discretionary {-}{}{}name\_\discretionary {-}{}{}hash}{20}
+\contentsline {subsubsection}{\numberline {4.3.1.4}clear\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index}{21}
+\contentsline {subsubsection}{\numberline {4.3.1.5}clear\_\discretionary {-}{}{}result\_\discretionary {-}{}{}hash}{21}
+\contentsline {subsubsection}{\numberline {4.3.1.6}cuda\_\discretionary {-}{}{}queue\_\discretionary {-}{}{}check}{21}
+\contentsline {subsubsection}{\numberline {4.3.1.7}perform\_\discretionary {-}{}{}hashtable\_\discretionary {-}{}{}identity\_\discretionary {-}{}{}check}{21}
+\contentsline {subsubsection}{\numberline {4.3.1.8}prepare\_\discretionary {-}{}{}cuda\_\discretionary {-}{}{}alignments}{22}
+\contentsline {subsubsection}{\numberline {4.3.1.9}print\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index\_\discretionary {-}{}{}statistics}{22}
+\contentsline {subsubsection}{\numberline {4.3.1.10}qgram\_\discretionary {-}{}{}lookup}{22}
+\contentsline {subsubsection}{\numberline {4.3.1.11}qgram\_\discretionary {-}{}{}to\_\discretionary {-}{}{}read\_\discretionary {-}{}{}mapping}{23}
+\contentsline {subsubsection}{\numberline {4.3.1.12}run\_\discretionary {-}{}{}seashore}{23}
+\contentsline {subsection}{\numberline {4.3.2}Variable Documentation}{24}
+\contentsline {subsubsection}{\numberline {4.3.2.1}qgrams}{24}
+\contentsline {section}{\numberline {4.4}/home/tobias/work/SunStudioProjects/saruman/src/hash.h File Reference}{25}
+\contentsline {subsection}{\numberline {4.4.1}Function Documentation}{26}
+\contentsline {subsubsection}{\numberline {4.4.1.1}add\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}to\_\discretionary {-}{}{}index}{26}
+\contentsline {subsubsection}{\numberline {4.4.1.2}add\_\discretionary {-}{}{}start\_\discretionary {-}{}{}position}{26}
+\contentsline {subsubsection}{\numberline {4.4.1.3}clear\_\discretionary {-}{}{}name\_\discretionary {-}{}{}hash}{26}
+\contentsline {subsubsection}{\numberline {4.4.1.4}clear\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index}{27}
+\contentsline {subsubsection}{\numberline {4.4.1.5}clear\_\discretionary {-}{}{}result\_\discretionary {-}{}{}hash}{27}
+\contentsline {subsubsection}{\numberline {4.4.1.6}cuda\_\discretionary {-}{}{}queue\_\discretionary {-}{}{}check}{27}
+\contentsline {subsubsection}{\numberline {4.4.1.7}perform\_\discretionary {-}{}{}hashtable\_\discretionary {-}{}{}identity\_\discretionary {-}{}{}check}{28}
+\contentsline {subsubsection}{\numberline {4.4.1.8}prepare\_\discretionary {-}{}{}cuda\_\discretionary {-}{}{}alignments}{28}
+\contentsline {subsubsection}{\numberline {4.4.1.9}print\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index\_\discretionary {-}{}{}statistics}{28}
+\contentsline {subsubsection}{\numberline {4.4.1.10}qgram\_\discretionary {-}{}{}lookup}{29}
+\contentsline {subsubsection}{\numberline {4.4.1.11}qgram\_\discretionary {-}{}{}to\_\discretionary {-}{}{}read\_\discretionary {-}{}{}mapping}{29}
+\contentsline {subsubsection}{\numberline {4.4.1.12}run\_\discretionary {-}{}{}seashore}{29}
+\contentsline {subsection}{\numberline {4.4.2}Variable Documentation}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.1}chunk\_\discretionary {-}{}{}value}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.2}genome\_\discretionary {-}{}{}chunk\_\discretionary {-}{}{}run}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.3}genome\_\discretionary {-}{}{}sequence}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.4}hash\_\discretionary {-}{}{}members}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.5}maximal\_\discretionary {-}{}{}errors\_\discretionary {-}{}{}allowed}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.6}pos\_\discretionary {-}{}{}counter}{30}
+\contentsline {subsubsection}{\numberline {4.4.2.7}read\_\discretionary {-}{}{}length\_\discretionary {-}{}{}value}{31}
+\contentsline {subsubsection}{\numberline {4.4.2.8}read\_\discretionary {-}{}{}names}{31}
+\contentsline {subsubsection}{\numberline {4.4.2.9}reads}{31}
+\contentsline {subsubsection}{\numberline {4.4.2.10}sw\_\discretionary {-}{}{}match\_\discretionary {-}{}{}value}{31}
+\contentsline {subsubsection}{\numberline {4.4.2.11}sw\_\discretionary {-}{}{}mismatch\_\discretionary {-}{}{}value}{31}
+\contentsline {section}{\numberline {4.5}/home/tobias/work/SunStudioProjects/saruman/src/saruman.c File Reference}{32}
+\contentsline {subsection}{\numberline {4.5.1}Define Documentation}{32}
+\contentsline {subsubsection}{\numberline {4.5.1.1}BUFFER\_\discretionary {-}{}{}FACTOR}{32}
+\contentsline {subsubsection}{\numberline {4.5.1.2}NUM\_\discretionary {-}{}{}THREADS}{32}
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{32}
+\contentsline {subsubsection}{\numberline {4.5.2.1}main}{32}
+\contentsline {subsection}{\numberline {4.5.3}Variable Documentation}{33}
+\contentsline {subsubsection}{\numberline {4.5.3.1}thread\_\discretionary {-}{}{}data\_\discretionary {-}{}{}array}{33}
+\contentsline {section}{\numberline {4.6}/home/tobias/work/SunStudioProjects/saruman/src/saruman.h File Reference}{34}
+\contentsline {subsection}{\numberline {4.6.1}Function Documentation}{34}
+\contentsline {subsubsection}{\numberline {4.6.1.1}main}{34}
+\contentsline {subsection}{\numberline {4.6.2}Variable Documentation}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.1}alignment\_\discretionary {-}{}{}time}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.2}be\_\discretionary {-}{}{}verbose\_\discretionary {-}{}{}value}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.3}chunk\_\discretionary {-}{}{}value}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.4}error\_\discretionary {-}{}{}rate\_\discretionary {-}{}{}value}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.5}genome\_\discretionary {-}{}{}chunk\_\discretionary {-}{}{}run}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.6}genome\_\discretionary {-}{}{}file\_\discretionary {-}{}{}value}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.7}genome\_\discretionary {-}{}{}sequence}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.8}line\_\discretionary {-}{}{}offset}{35}
+\contentsline {subsubsection}{\numberline {4.6.2.9}maximal\_\discretionary {-}{}{}errors\_\discretionary {-}{}{}allowed}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.10}qgram\_\discretionary {-}{}{}length}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.11}read\_\discretionary {-}{}{}file\_\discretionary {-}{}{}value}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.12}read\_\discretionary {-}{}{}length\_\discretionary {-}{}{}value}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.13}read\_\discretionary {-}{}{}names}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.14}read\_\discretionary {-}{}{}number\_\discretionary {-}{}{}value}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.15}reads}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.16}sw\_\discretionary {-}{}{}match\_\discretionary {-}{}{}value}{36}
+\contentsline {subsubsection}{\numberline {4.6.2.17}sw\_\discretionary {-}{}{}mismatch\_\discretionary {-}{}{}value}{36}
+\contentsline {section}{\numberline {4.7}/home/tobias/work/SunStudioProjects/saruman/src/util.c File Reference}{37}
+\contentsline {subsection}{\numberline {4.7.1}Define Documentation}{37}
+\contentsline {subsubsection}{\numberline {4.7.1.1}SWAP\_\discretionary {-}{}{}CHAR}{37}
+\contentsline {subsubsection}{\numberline {4.7.1.2}VERSION}{37}
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{37}
+\contentsline {subsubsection}{\numberline {4.7.2.1}check\_\discretionary {-}{}{}user\_\discretionary {-}{}{}input}{37}
+\contentsline {subsubsection}{\numberline {4.7.2.2}construct\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index}{38}
+\contentsline {subsubsection}{\numberline {4.7.2.3}read\_\discretionary {-}{}{}genome\_\discretionary {-}{}{}fasta\_\discretionary {-}{}{}file}{38}
+\contentsline {subsubsection}{\numberline {4.7.2.4}read\_\discretionary {-}{}{}multiple\_\discretionary {-}{}{}fasta\_\discretionary {-}{}{}file}{38}
+\contentsline {subsubsection}{\numberline {4.7.2.5}reverse}{39}
+\contentsline {subsubsection}{\numberline {4.7.2.6}reverse\_\discretionary {-}{}{}complement}{39}
+\contentsline {section}{\numberline {4.8}/home/tobias/work/SunStudioProjects/saruman/src/util.h File Reference}{40}
+\contentsline {subsection}{\numberline {4.8.1}Define Documentation}{41}
+\contentsline {subsubsection}{\numberline {4.8.1.1}MAX\_\discretionary {-}{}{}READ\_\discretionary {-}{}{}DESCRIPTION\_\discretionary {-}{}{}LENGTH}{41}
+\contentsline {subsection}{\numberline {4.8.2}Function Documentation}{41}
+\contentsline {subsubsection}{\numberline {4.8.2.1}check\_\discretionary {-}{}{}user\_\discretionary {-}{}{}input}{41}
+\contentsline {subsubsection}{\numberline {4.8.2.2}construct\_\discretionary {-}{}{}qgram\_\discretionary {-}{}{}index}{41}
+\contentsline {subsubsection}{\numberline {4.8.2.3}read\_\discretionary {-}{}{}genome\_\discretionary {-}{}{}fasta\_\discretionary {-}{}{}file}{42}
+\contentsline {subsubsection}{\numberline {4.8.2.4}read\_\discretionary {-}{}{}multiple\_\discretionary {-}{}{}fasta\_\discretionary {-}{}{}file}{42}
+\contentsline {subsubsection}{\numberline {4.8.2.5}reverse}{42}
+\contentsline {subsubsection}{\numberline {4.8.2.6}reverse\_\discretionary {-}{}{}complement}{43}
+\contentsline {subsection}{\numberline {4.8.3}Variable Documentation}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.1}be\_\discretionary {-}{}{}verbose\_\discretionary {-}{}{}parameter}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.2}be\_\discretionary {-}{}{}verbose\_\discretionary {-}{}{}value}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.3}chunk\_\discretionary {-}{}{}parameter}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.4}chunk\_\discretionary {-}{}{}value}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.5}end}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.6}error\_\discretionary {-}{}{}rate\_\discretionary {-}{}{}parameter}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.7}error\_\discretionary {-}{}{}rate\_\discretionary {-}{}{}value}{43}
+\contentsline {subsubsection}{\numberline {4.8.3.8}genome\_\discretionary {-}{}{}chunk\_\discretionary {-}{}{}parameter}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.9}genome\_\discretionary {-}{}{}chunk\_\discretionary {-}{}{}value}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.10}genome\_\discretionary {-}{}{}file\_\discretionary {-}{}{}offset}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.11}genome\_\discretionary {-}{}{}file\_\discretionary {-}{}{}parameter}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.12}genome\_\discretionary {-}{}{}file\_\discretionary {-}{}{}value}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.13}help\_\discretionary {-}{}{}parameter}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.14}help\_\discretionary {-}{}{}value}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.15}line\_\discretionary {-}{}{}offset}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.16}read\_\discretionary {-}{}{}file\_\discretionary {-}{}{}parameter}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.17}read\_\discretionary {-}{}{}file\_\discretionary {-}{}{}value}{44}
+\contentsline {subsubsection}{\numberline {4.8.3.18}read\_\discretionary {-}{}{}length\_\discretionary {-}{}{}parameter}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.19}read\_\discretionary {-}{}{}length\_\discretionary {-}{}{}value}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.20}read\_\discretionary {-}{}{}names}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.21}read\_\discretionary {-}{}{}number\_\discretionary {-}{}{}parameter}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.22}read\_\discretionary {-}{}{}number\_\discretionary {-}{}{}value}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.23}sw\_\discretionary {-}{}{}match\_\discretionary {-}{}{}parameter}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.24}sw\_\discretionary {-}{}{}match\_\discretionary {-}{}{}value}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.25}sw\_\discretionary {-}{}{}mismatch\_\discretionary {-}{}{}parameter}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.26}sw\_\discretionary {-}{}{}mismatch\_\discretionary {-}{}{}value}{45}
+\contentsline {subsubsection}{\numberline {4.8.3.27}version\_\discretionary {-}{}{}parameter}{46}
+\contentsline {subsubsection}{\numberline {4.8.3.28}version\_\discretionary {-}{}{}value}{46}

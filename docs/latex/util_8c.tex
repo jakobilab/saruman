@@ -1,0 +1,126 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/util.c File Reference}
+\label{util_8c}\index{/home/tobias/work/SunStudioProjects/saruman/src/util.c@{/home/tobias/work/SunStudioProjects/saruman/src/util.c}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$ctype.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include \char`\"{}argtable2.h\char`\"{}}\par
+{\tt \#include \char`\"{}util.h\char`\"{}}\par
+{\tt \#include \char`\"{}saruman.h\char`\"{}}\par
+{\tt \#include \char`\"{}hash.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf VERSION}~\char`\"{}SVN-BUILD-M2\char`\"{}
+\item 
+\#define {\bf SWAP\_\-CHAR}(x, y)~\{char c; c = x; x = y; y = c;\}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf reverse} (char $\ast$sequence, int sequence\_\-length)
+\item 
+void {\bf reverse\_\-complement} (char $\ast$sequence, int sequence\_\-length)
+\item 
+signed short int {\bf check\_\-user\_\-input} (int argc, char $\ast$argv[$\,$])
+\item 
+char $\ast$ {\bf read\_\-multiple\_\-fasta\_\-file} (const char $\ast$filename, int max\_\-entries, int readlength)
+\item 
+void {\bf construct\_\-qgram\_\-index} (char $\ast${\bf genome\_\-sequence}, int qgram\_\-size, int run)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{util.c@{util.c}!SWAP\_\-CHAR@{SWAP\_\-CHAR}}
+\index{SWAP\_\-CHAR@{SWAP\_\-CHAR}!util.c@{util.c}}
+\subsubsection[{SWAP\_\-CHAR}]{\setlength{\rightskip}{0pt plus 5cm}\#define SWAP\_\-CHAR(x, \/  y)~\{char c; c = x; x = y; y = c;\}}\label{util_8c_095f50fa15c6a279dd92d579f21e1cd1}
+
+
+\index{util.c@{util.c}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!util.c@{util.c}}
+\subsubsection[{VERSION}]{\setlength{\rightskip}{0pt plus 5cm}\#define VERSION~\char`\"{}SVN-BUILD-M2\char`\"{}}\label{util_8c_1c6d5de492ac61ad29aec7aa9a436bbf}
+
+
+
+
+Referenced by check\_\-user\_\-input().
+
+\subsection{Function Documentation}
+\index{util.c@{util.c}!check\_\-user\_\-input@{check\_\-user\_\-input}}
+\index{check\_\-user\_\-input@{check\_\-user\_\-input}!util.c@{util.c}}
+\subsubsection[{check\_\-user\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}signed short int check\_\-user\_\-input (int {\em argc}, \/  char $\ast$ {\em argv}[$\,$])}\label{util_8c_99fd0b758cd04342a6887e657d634de7}
+
+
+Checks the user input. Tests if all mandatory values are given. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]number of CLI arguments \item[{\em argv}]char array of the CLI arguments \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 program starrted but directly terminated (show help, version etc)\par
+ -1 missing mandaroty value\par
+ 2 all mandatory values ok, start mapping programm \end{Desc}
+
+
+References be\_\-verbose\_\-parameter, be\_\-verbose\_\-value, chunk\_\-parameter, chunk\_\-value, end, error\_\-rate\_\-parameter, error\_\-rate\_\-value, fastq\_\-parameter, genome\_\-chunk\_\-parameter, genome\_\-chunk\_\-value, genome\_\-file\_\-parameter, genome\_\-file\_\-value, help\_\-parameter, print\_\-non\_\-matching\_\-reads, print\_\-non\_\-matching\_\-reads\_\-parameter, read\_\-file\_\-parameter, read\_\-file\_\-value, read\_\-length\_\-parameter, read\_\-length\_\-value, read\_\-number\_\-parameter, read\_\-number\_\-value, sw\_\-match\_\-parameter, sw\_\-match\_\-value, sw\_\-mismatch\_\-parameter, sw\_\-mismatch\_\-value, use\_\-fastq, VERSION, and version\_\-parameter.
+
+Referenced by main().\index{util.c@{util.c}!construct\_\-qgram\_\-index@{construct\_\-qgram\_\-index}}
+\index{construct\_\-qgram\_\-index@{construct\_\-qgram\_\-index}!util.c@{util.c}}
+\subsubsection[{construct\_\-qgram\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}void construct\_\-qgram\_\-index (char $\ast$ {\em genome\_\-sequence}, \/  int {\em qgram\_\-size}, \/  int {\em run})}\label{util_8c_f7184965942e6545edb4af31cc12688d}
+
+
+Constructs the main qgram index (\doxyref{qgram\_\-hash}{p.}{structqgram__hash}) holding all start positions for each qgram in the genome \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em genome\_\-sequence}]the genome sequence returned by \doxyref{read\_\-genome\_\-fasta\_\-file}{p.}{util_8h_56acbbc313fd2b9f268831be66e30ed5} \item[{\em qgram\_\-size}]the desired qgram size (computed automaticly as {\tt short int qgram\_\-length = ceil(read\_\-length / (maximal\_\-errors\_\-allowed+1))-1}) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References add\_\-qgram\_\-to\_\-index(), and genome\_\-chunk\_\-value.
+
+Referenced by main().\index{util.c@{util.c}!read\_\-multiple\_\-fasta\_\-file@{read\_\-multiple\_\-fasta\_\-file}}
+\index{read\_\-multiple\_\-fasta\_\-file@{read\_\-multiple\_\-fasta\_\-file}!util.c@{util.c}}
+\subsubsection[{read\_\-multiple\_\-fasta\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\_\-multiple\_\-fasta\_\-file (const char $\ast$ {\em filename}, \/  int {\em max\_\-entries}, \/  int {\em readlength})}\label{util_8c_91efbe26ec264f7701b4e4cab34c2331}
+
+
+Reads and parses the given read file. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]path to the file to read \item[{\em max\_\-entries}]number of reads to parse \item[{\em readlength}]length of the reads \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a char array containing all reads in order \end{Desc}
+
+
+$<$ holds the results aka start positions in genome 
+
+References line\_\-offset, MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH, maximal\_\-errors\_\-allowed, read\_\-name\_\-hash::name, read\_\-names, read\_\-name\_\-hash::read\_\-number, and use\_\-fastq.
+
+Referenced by main().\index{util.c@{util.c}!reverse@{reverse}}
+\index{reverse@{reverse}!util.c@{util.c}}
+\subsubsection[{reverse}]{\setlength{\rightskip}{0pt plus 5cm}void reverse (char $\ast$ {\em sequence}, \/  int {\em sequence\_\-length})}\label{util_8c_cf3c7abd00b7ed252afccc0a4474a80f}
+
+
+Reverses a given string \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em sequence}]char sequence \item[{\em sequence\_\-length}]length of the sequence to be reversed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a char array containing the genome \end{Desc}
+
+
+References SWAP\_\-CHAR.
+
+Referenced by reverse\_\-complement().\index{util.c@{util.c}!reverse\_\-complement@{reverse\_\-complement}}
+\index{reverse\_\-complement@{reverse\_\-complement}!util.c@{util.c}}
+\subsubsection[{reverse\_\-complement}]{\setlength{\rightskip}{0pt plus 5cm}void reverse\_\-complement (char $\ast$ {\em sequence}, \/  int {\em sequence\_\-length})}\label{util_8c_ee13853bdebdbeef1f20ec7dec955baa}
+
+
+
+
+References reverse().
+
+Referenced by prepare\_\-cuda\_\-alignments(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().

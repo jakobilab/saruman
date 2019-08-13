@@ -1,0 +1,419 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/util.h File Reference}
+\label{util_8h}\index{/home/tobias/work/SunStudioProjects/saruman/src/util.h@{/home/tobias/work/SunStudioProjects/saruman/src/util.h}}
+{\tt \#include $<$uthash.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct {\bf read\_\-name\_\-hash}
+\begin{CompactList}\small\item\em a structure needed to built a hash index which maps a read id to a human readable name \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}~65
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf reverse\_\-complement} (char $\ast$sequence, int sequence\_\-length)
+\item 
+signed short int {\bf check\_\-user\_\-input} (int argc, char $\ast$argv[$\,$])
+\item 
+char $\ast$ {\bf read\_\-multiple\_\-fasta\_\-file} (const char $\ast$filename, int max\_\-entries, int readlength)
+\item 
+char $\ast$ {\bf read\_\-genome\_\-fasta\_\-file} (const char $\ast$filename)
+\item 
+void {\bf construct\_\-qgram\_\-index} (char $\ast${\bf genome\_\-sequence}, int qgram\_\-size, int run)
+\item 
+void {\bf reverse} (char $\ast$sequence, int sequence\_\-length)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const char $\ast$ {\bf genome\_\-file\_\-value}
+\item 
+const char $\ast$ {\bf read\_\-file\_\-value}
+\item 
+float {\bf error\_\-rate\_\-value}
+\item 
+int {\bf chunk\_\-value}
+\item 
+int {\bf sw\_\-match\_\-value}
+\item 
+int {\bf sw\_\-mismatch\_\-value}
+\item 
+int {\bf read\_\-number\_\-value}
+\item 
+unsigned int {\bf genome\_\-chunk\_\-value}
+\item 
+unsigned short int {\bf read\_\-length\_\-value}
+\item 
+unsigned short int {\bf be\_\-verbose\_\-value}
+\item 
+unsigned short int {\bf use\_\-fastq}
+\item 
+unsigned short int {\bf print\_\-non\_\-matching\_\-reads}
+\item 
+unsigned short int {\bf help\_\-value}
+\item 
+unsigned short int {\bf version\_\-value}
+\item 
+unsigned long {\bf genome\_\-file\_\-offset}
+\item 
+unsigned long int {\bf line\_\-offset}
+\item 
+struct arg\_\-dbl $\ast$ {\bf error\_\-rate\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf chunk\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf sw\_\-match\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf sw\_\-mismatch\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf read\_\-number\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf read\_\-length\_\-parameter}
+\item 
+struct arg\_\-file $\ast$ {\bf genome\_\-file\_\-parameter}
+\item 
+struct arg\_\-file $\ast$ {\bf read\_\-file\_\-parameter}
+\item 
+struct arg\_\-int $\ast$ {\bf genome\_\-chunk\_\-parameter}
+\item 
+struct arg\_\-lit $\ast$ {\bf be\_\-verbose\_\-parameter}
+\item 
+struct arg\_\-lit $\ast$ {\bf help\_\-parameter}
+\item 
+struct arg\_\-lit $\ast$ {\bf version\_\-parameter}
+\item 
+struct arg\_\-lit $\ast$ {\bf fastq\_\-parameter}
+\item 
+struct arg\_\-lit $\ast$ {\bf print\_\-non\_\-matching\_\-reads\_\-parameter}
+\item 
+struct arg\_\-end $\ast$ {\bf end}
+\item 
+struct {\bf read\_\-name\_\-hash} $\ast$ {\bf read\_\-names}
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{util.h@{util.h}!MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH@{MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}}
+\index{MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH@{MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}!util.h@{util.h}}
+\subsubsection[{MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH~65}\label{util_8h_3d2e1fc95d0950e7d4b40bedc0911e70}
+
+
+
+
+Referenced by read\_\-multiple\_\-fasta\_\-file().
+
+\subsection{Function Documentation}
+\index{util.h@{util.h}!check\_\-user\_\-input@{check\_\-user\_\-input}}
+\index{check\_\-user\_\-input@{check\_\-user\_\-input}!util.h@{util.h}}
+\subsubsection[{check\_\-user\_\-input}]{\setlength{\rightskip}{0pt plus 5cm}signed short int check\_\-user\_\-input (int {\em argc}, \/  char $\ast$ {\em argv}[$\,$])}\label{util_8h_99fd0b758cd04342a6887e657d634de7}
+
+
+Checks the user input. Tests if all mandatory values are given. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]number of CLI arguments \item[{\em argv}]char array of the CLI arguments \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 program starrted but directly terminated (show help, version etc)\par
+ -1 missing mandaroty value\par
+ 2 all mandatory values ok, start mapping programm \end{Desc}
+
+
+References be\_\-verbose\_\-parameter, be\_\-verbose\_\-value, chunk\_\-parameter, chunk\_\-value, end, error\_\-rate\_\-parameter, error\_\-rate\_\-value, fastq\_\-parameter, genome\_\-chunk\_\-parameter, genome\_\-chunk\_\-value, genome\_\-file\_\-parameter, genome\_\-file\_\-value, help\_\-parameter, print\_\-non\_\-matching\_\-reads, print\_\-non\_\-matching\_\-reads\_\-parameter, read\_\-file\_\-parameter, read\_\-file\_\-value, read\_\-length\_\-parameter, read\_\-length\_\-value, read\_\-number\_\-parameter, read\_\-number\_\-value, sw\_\-match\_\-parameter, sw\_\-match\_\-value, sw\_\-mismatch\_\-parameter, sw\_\-mismatch\_\-value, use\_\-fastq, VERSION, and version\_\-parameter.
+
+Referenced by main().\index{util.h@{util.h}!construct\_\-qgram\_\-index@{construct\_\-qgram\_\-index}}
+\index{construct\_\-qgram\_\-index@{construct\_\-qgram\_\-index}!util.h@{util.h}}
+\subsubsection[{construct\_\-qgram\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}void construct\_\-qgram\_\-index (char $\ast$ {\em genome\_\-sequence}, \/  int {\em qgram\_\-size}, \/  int {\em run})}\label{util_8h_f7184965942e6545edb4af31cc12688d}
+
+
+Constructs the main qgram index (\doxyref{qgram\_\-hash}{p.}{structqgram__hash}) holding all start positions for each qgram in the genome \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em genome\_\-sequence}]the genome sequence returned by \doxyref{read\_\-genome\_\-fasta\_\-file}{p.}{util_8h_56acbbc313fd2b9f268831be66e30ed5} \item[{\em qgram\_\-size}]the desired qgram size (computed automaticly as {\tt short int qgram\_\-length = ceil(read\_\-length / (maximal\_\-errors\_\-allowed+1))-1}) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]nothing \end{Desc}
+
+
+References add\_\-qgram\_\-to\_\-index(), and genome\_\-chunk\_\-value.
+
+Referenced by main().\index{util.h@{util.h}!read\_\-genome\_\-fasta\_\-file@{read\_\-genome\_\-fasta\_\-file}}
+\index{read\_\-genome\_\-fasta\_\-file@{read\_\-genome\_\-fasta\_\-file}!util.h@{util.h}}
+\subsubsection[{read\_\-genome\_\-fasta\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\_\-genome\_\-fasta\_\-file (const char $\ast$ {\em filename})}\label{util_8h_56acbbc313fd2b9f268831be66e30ed5}
+
+
+Reads and parses the given genome file. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]path to the file to read \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a char array containing the genome \end{Desc}
+\index{util.h@{util.h}!read\_\-multiple\_\-fasta\_\-file@{read\_\-multiple\_\-fasta\_\-file}}
+\index{read\_\-multiple\_\-fasta\_\-file@{read\_\-multiple\_\-fasta\_\-file}!util.h@{util.h}}
+\subsubsection[{read\_\-multiple\_\-fasta\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\_\-multiple\_\-fasta\_\-file (const char $\ast$ {\em filename}, \/  int {\em max\_\-entries}, \/  int {\em readlength})}\label{util_8h_91efbe26ec264f7701b4e4cab34c2331}
+
+
+Reads and parses the given read file. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em filename}]path to the file to read \item[{\em max\_\-entries}]number of reads to parse \item[{\em readlength}]length of the reads \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a char array containing all reads in order \end{Desc}
+
+
+$<$ holds the results aka start positions in genome 
+
+References line\_\-offset, MAX\_\-READ\_\-DESCRIPTION\_\-LENGTH, maximal\_\-errors\_\-allowed, read\_\-name\_\-hash::name, read\_\-names, read\_\-name\_\-hash::read\_\-number, and use\_\-fastq.
+
+Referenced by main().\index{util.h@{util.h}!reverse@{reverse}}
+\index{reverse@{reverse}!util.h@{util.h}}
+\subsubsection[{reverse}]{\setlength{\rightskip}{0pt plus 5cm}void reverse (char $\ast$ {\em sequence}, \/  int {\em sequence\_\-length})}\label{util_8h_cf3c7abd00b7ed252afccc0a4474a80f}
+
+
+Reverses a given string \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em sequence}]char sequence \item[{\em sequence\_\-length}]length of the sequence to be reversed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]a char array containing the genome \end{Desc}
+
+
+References SWAP\_\-CHAR.
+
+Referenced by reverse\_\-complement().\index{util.h@{util.h}!reverse\_\-complement@{reverse\_\-complement}}
+\index{reverse\_\-complement@{reverse\_\-complement}!util.h@{util.h}}
+\subsubsection[{reverse\_\-complement}]{\setlength{\rightskip}{0pt plus 5cm}void reverse\_\-complement (char $\ast$ {\em sequence}, \/  int {\em sequence\_\-length})}\label{util_8h_ee13853bdebdbeef1f20ec7dec955baa}
+
+
+
+
+References reverse().
+
+Referenced by prepare\_\-cuda\_\-alignments(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().
+
+\subsection{Variable Documentation}
+\index{util.h@{util.h}!be\_\-verbose\_\-parameter@{be\_\-verbose\_\-parameter}}
+\index{be\_\-verbose\_\-parameter@{be\_\-verbose\_\-parameter}!util.h@{util.h}}
+\subsubsection[{be\_\-verbose\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-lit$\ast$ {\bf be\_\-verbose\_\-parameter}}\label{util_8h_8a3eab0fe2f9ef8b177a730db01e0df9}
+
+
+generates more detailed output 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!be\_\-verbose\_\-value@{be\_\-verbose\_\-value}}
+\index{be\_\-verbose\_\-value@{be\_\-verbose\_\-value}!util.h@{util.h}}
+\subsubsection[{be\_\-verbose\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf be\_\-verbose\_\-value}}\label{util_8h_e87ca0c58972a2f744b0fcbb8387cf2e}
+
+
+generates more detailed output 
+
+Referenced by check\_\-user\_\-input(), and cuda\_\-needleman\_\-wunsch().\index{util.h@{util.h}!chunk\_\-parameter@{chunk\_\-parameter}}
+\index{chunk\_\-parameter@{chunk\_\-parameter}!util.h@{util.h}}
+\subsubsection[{chunk\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf chunk\_\-parameter}}\label{util_8h_c1f95a21d8d42a29fbe65b2c06fbade2}
+
+
+holds the number of reads to be processed in one run 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!chunk\_\-value@{chunk\_\-value}}
+\index{chunk\_\-value@{chunk\_\-value}!util.h@{util.h}}
+\subsubsection[{chunk\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf chunk\_\-value}}\label{util_8h_0981f0fb32a249e501c5f87dbfaaf13f}
+
+
+holds the number of reads to be processed in one run 
+
+Referenced by check\_\-user\_\-input(), cuda\_\-queue\_\-check(), main(), and prepare\_\-cuda\_\-alignments().\index{util.h@{util.h}!end@{end}}
+\index{end@{end}!util.h@{util.h}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-end$\ast$ {\bf end}}\label{util_8h_088ac7ffa534015d5b07ddcc7aef9fd4}
+
+
+needed by the argtable library 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!error\_\-rate\_\-parameter@{error\_\-rate\_\-parameter}}
+\index{error\_\-rate\_\-parameter@{error\_\-rate\_\-parameter}!util.h@{util.h}}
+\subsubsection[{error\_\-rate\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-dbl$\ast$ {\bf error\_\-rate\_\-parameter}}\label{util_8h_bbcd895256dfb9c314d859f7f0f80139}
+
+
+holds the error rate of the reads, e.g. 0.083 -$>$ 8.3\% 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!error\_\-rate\_\-value@{error\_\-rate\_\-value}}
+\index{error\_\-rate\_\-value@{error\_\-rate\_\-value}!util.h@{util.h}}
+\subsubsection[{error\_\-rate\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf error\_\-rate\_\-value}}\label{util_8h_19d9bf4bb9cbcac470f6e66273ae046b}
+
+
+holds the error rate of the reads, e.g. 0.083 -$>$ 8.3\% 
+
+Referenced by check\_\-user\_\-input(), and main().\index{util.h@{util.h}!fastq\_\-parameter@{fastq\_\-parameter}}
+\index{fastq\_\-parameter@{fastq\_\-parameter}!util.h@{util.h}}
+\subsubsection[{fastq\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-lit$\ast$ {\bf fastq\_\-parameter}}\label{util_8h_7da3a32fe6d3017d75b5a47af551de88}
+
+
+use fastq format for reads 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!genome\_\-chunk\_\-parameter@{genome\_\-chunk\_\-parameter}}
+\index{genome\_\-chunk\_\-parameter@{genome\_\-chunk\_\-parameter}!util.h@{util.h}}
+\subsubsection[{genome\_\-chunk\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf genome\_\-chunk\_\-parameter}}\label{util_8h_38d9d12054c7b9b3673c882c7f7f48f2}
+
+
+enables multithreading 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!genome\_\-chunk\_\-value@{genome\_\-chunk\_\-value}}
+\index{genome\_\-chunk\_\-value@{genome\_\-chunk\_\-value}!util.h@{util.h}}
+\subsubsection[{genome\_\-chunk\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf genome\_\-chunk\_\-value}}\label{util_8h_10203d9c4ce6e6a30570c57b1334dc27}
+
+
+shows the version number 
+
+Referenced by check\_\-user\_\-input(), construct\_\-qgram\_\-index(), main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{util.h@{util.h}!genome\_\-file\_\-offset@{genome\_\-file\_\-offset}}
+\index{genome\_\-file\_\-offset@{genome\_\-file\_\-offset}!util.h@{util.h}}
+\subsubsection[{genome\_\-file\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf genome\_\-file\_\-offset}}\label{util_8h_1963eca1d8174844bc0492375cf682fb}
+
+
+\index{util.h@{util.h}!genome\_\-file\_\-parameter@{genome\_\-file\_\-parameter}}
+\index{genome\_\-file\_\-parameter@{genome\_\-file\_\-parameter}!util.h@{util.h}}
+\subsubsection[{genome\_\-file\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-file$\ast$ {\bf genome\_\-file\_\-parameter}}\label{util_8h_75b718c40afda1108e7880b7ee5a6add}
+
+
+holds the path to the reference genome in fasta format 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!genome\_\-file\_\-value@{genome\_\-file\_\-value}}
+\index{genome\_\-file\_\-value@{genome\_\-file\_\-value}!util.h@{util.h}}
+\subsubsection[{genome\_\-file\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf genome\_\-file\_\-value}}\label{util_8h_0f4d9b412b31c8472a2ffbfde3c1f03f}
+
+
+holds the path to the reference genome in fasta format 
+
+Referenced by check\_\-user\_\-input(), and main().\index{util.h@{util.h}!help\_\-parameter@{help\_\-parameter}}
+\index{help\_\-parameter@{help\_\-parameter}!util.h@{util.h}}
+\subsubsection[{help\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-lit$\ast$ {\bf help\_\-parameter}}\label{util_8h_299625352dc377a205b3792861ad61c5}
+
+
+shows the help 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!help\_\-value@{help\_\-value}}
+\index{help\_\-value@{help\_\-value}!util.h@{util.h}}
+\subsubsection[{help\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf help\_\-value}}\label{util_8h_4a76b57d2dc7972c083c7ec609be437c}
+
+
+shows the help \index{util.h@{util.h}!line\_\-offset@{line\_\-offset}}
+\index{line\_\-offset@{line\_\-offset}!util.h@{util.h}}
+\subsubsection[{line\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long int {\bf line\_\-offset}}\label{util_8h_2356197c34d4150fc2c98d9ed2ccef11}
+
+
+
+
+Referenced by main(), and read\_\-multiple\_\-fasta\_\-file().\index{util.h@{util.h}!print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}}
+\index{print\_\-non\_\-matching\_\-reads@{print\_\-non\_\-matching\_\-reads}!util.h@{util.h}}
+\subsubsection[{print\_\-non\_\-matching\_\-reads}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf print\_\-non\_\-matching\_\-reads}}\label{util_8h_a62460c85989c1db232083ed238caac4}
+
+
+print non matching reads 
+
+Referenced by check\_\-user\_\-input(), main(), and run\_\-seashore().\index{util.h@{util.h}!print\_\-non\_\-matching\_\-reads\_\-parameter@{print\_\-non\_\-matching\_\-reads\_\-parameter}}
+\index{print\_\-non\_\-matching\_\-reads\_\-parameter@{print\_\-non\_\-matching\_\-reads\_\-parameter}!util.h@{util.h}}
+\subsubsection[{print\_\-non\_\-matching\_\-reads\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-lit$\ast$ {\bf print\_\-non\_\-matching\_\-reads\_\-parameter}}\label{util_8h_6013fd548a6a66e78ab1628b8573edd8}
+
+
+print out non matching reads 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!read\_\-file\_\-parameter@{read\_\-file\_\-parameter}}
+\index{read\_\-file\_\-parameter@{read\_\-file\_\-parameter}!util.h@{util.h}}
+\subsubsection[{read\_\-file\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-file$\ast$ {\bf read\_\-file\_\-parameter}}\label{util_8h_6236e56c179bf806b7e184ff7ff1a778}
+
+
+holds the path to the file in fasta format containing the reads 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!read\_\-file\_\-value@{read\_\-file\_\-value}}
+\index{read\_\-file\_\-value@{read\_\-file\_\-value}!util.h@{util.h}}
+\subsubsection[{read\_\-file\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf read\_\-file\_\-value}}\label{util_8h_7e0ebff9d0ff905d5fba75c60367c542}
+
+
+holds the path to the file in fasta format containing the reads 
+
+Referenced by check\_\-user\_\-input(), and main().\index{util.h@{util.h}!read\_\-length\_\-parameter@{read\_\-length\_\-parameter}}
+\index{read\_\-length\_\-parameter@{read\_\-length\_\-parameter}!util.h@{util.h}}
+\subsubsection[{read\_\-length\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf read\_\-length\_\-parameter}}\label{util_8h_18ad72329e65eb6fc7da08411d156e9f}
+
+
+holds the length of each read in bp 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!read\_\-length\_\-value@{read\_\-length\_\-value}}
+\index{read\_\-length\_\-value@{read\_\-length\_\-value}!util.h@{util.h}}
+\subsubsection[{read\_\-length\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf read\_\-length\_\-value}}\label{util_8h_479a7d2a7ccfd26746c3831ea1d46afe}
+
+
+holds the length of each read in bp 
+
+Referenced by check\_\-user\_\-input(), main(), prepare\_\-cuda\_\-alignments(), and run\_\-seashore().\index{util.h@{util.h}!read\_\-names@{read\_\-names}}
+\index{read\_\-names@{read\_\-names}!util.h@{util.h}}
+\subsubsection[{read\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf read\_\-name\_\-hash}$\ast$ {\bf read\_\-names}}\label{util_8h_0aa4bc36df5f7c54e3b8663dfd3b40ca}
+
+
+holds the results aka start positions in genome 
+
+Referenced by clear\_\-name\_\-hash(), cuda\_\-needleman\_\-wunsch(), main(), read\_\-multiple\_\-fasta\_\-file(), and run\_\-seashore().\index{util.h@{util.h}!read\_\-number\_\-parameter@{read\_\-number\_\-parameter}}
+\index{read\_\-number\_\-parameter@{read\_\-number\_\-parameter}!util.h@{util.h}}
+\subsubsection[{read\_\-number\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf read\_\-number\_\-parameter}}\label{util_8h_b152373a6e747fdca2e638f68ee630df}
+
+
+holds the number of total reads beeing mapped by the program 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!read\_\-number\_\-value@{read\_\-number\_\-value}}
+\index{read\_\-number\_\-value@{read\_\-number\_\-value}!util.h@{util.h}}
+\subsubsection[{read\_\-number\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf read\_\-number\_\-value}}\label{util_8h_39784325be5139d2f724b4c8574fd8ad}
+
+
+holds the number of total reads beeing mapped by the program 
+
+Referenced by check\_\-user\_\-input(), and main().\index{util.h@{util.h}!sw\_\-match\_\-parameter@{sw\_\-match\_\-parameter}}
+\index{sw\_\-match\_\-parameter@{sw\_\-match\_\-parameter}!util.h@{util.h}}
+\subsubsection[{sw\_\-match\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf sw\_\-match\_\-parameter}}\label{util_8h_296041158ba250be77ac681464d3f744}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!sw\_\-match\_\-value@{sw\_\-match\_\-value}}
+\index{sw\_\-match\_\-value@{sw\_\-match\_\-value}!util.h@{util.h}}
+\subsubsection[{sw\_\-match\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-match\_\-value}}\label{util_8h_1f93bbee2addec9da31597d83b7160c0}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input(), main(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().\index{util.h@{util.h}!sw\_\-mismatch\_\-parameter@{sw\_\-mismatch\_\-parameter}}
+\index{sw\_\-mismatch\_\-parameter@{sw\_\-mismatch\_\-parameter}!util.h@{util.h}}
+\subsubsection[{sw\_\-mismatch\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-int$\ast$ {\bf sw\_\-mismatch\_\-parameter}}\label{util_8h_167de9fc1b57b2cb21bb5159514865fb}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}}
+\index{sw\_\-mismatch\_\-value@{sw\_\-mismatch\_\-value}!util.h@{util.h}}
+\subsubsection[{sw\_\-mismatch\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf sw\_\-mismatch\_\-value}}\label{util_8h_064ce347753ae0707c1ff0cea06e6366}
+
+
+holds the costs for a match used by the CUDA Smith-Waterman module 
+
+Referenced by check\_\-user\_\-input(), main(), qgram\_\-to\_\-read\_\-mapping(), and run\_\-seashore().\index{util.h@{util.h}!use\_\-fastq@{use\_\-fastq}}
+\index{use\_\-fastq@{use\_\-fastq}!util.h@{util.h}}
+\subsubsection[{use\_\-fastq}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf use\_\-fastq}}\label{util_8h_fac4418093de98d514e7320fc8d93fae}
+
+
+use fastq format 
+
+Referenced by check\_\-user\_\-input(), and read\_\-multiple\_\-fasta\_\-file().\index{util.h@{util.h}!version\_\-parameter@{version\_\-parameter}}
+\index{version\_\-parameter@{version\_\-parameter}!util.h@{util.h}}
+\subsubsection[{version\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}struct arg\_\-lit$\ast$ {\bf version\_\-parameter}}\label{util_8h_145f71a3f359fa923a421ca9c34077a0}
+
+
+shows the version number 
+
+Referenced by check\_\-user\_\-input().\index{util.h@{util.h}!version\_\-value@{version\_\-value}}
+\index{version\_\-value@{version\_\-value}!util.h@{util.h}}
+\subsubsection[{version\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int {\bf version\_\-value}}\label{util_8h_5ea311c0df9f158fc2f6736ff86c42d1}
+
+
+shows the version number 

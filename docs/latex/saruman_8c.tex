@@ -1,0 +1,65 @@
+\section{/home/tobias/work/SunStudioProjects/saruman/src/saruman.c File Reference}
+\label{saruman_8c}\index{/home/tobias/work/SunStudioProjects/saruman/src/saruman.c@{/home/tobias/work/SunStudioProjects/saruman/src/saruman.c}}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$ctype.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$pthread.h$>$}\par
+{\tt \#include $<$time.h$>$}\par
+{\tt \#include \char`\"{}hash.h\char`\"{}}\par
+{\tt \#include \char`\"{}argtable2.h\char`\"{}}\par
+{\tt \#include \char`\"{}util.h\char`\"{}}\par
+{\tt \#include \char`\"{}saruman.h\char`\"{}}\par
+{\tt \#include \char`\"{}cuda-functions.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf NUM\_\-THREADS}~3
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+struct {\bf thread\_\-data} {\bf thread\_\-data\_\-array} [NUM\_\-THREADS]
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{saruman.c@{saruman.c}!NUM\_\-THREADS@{NUM\_\-THREADS}}
+\index{NUM\_\-THREADS@{NUM\_\-THREADS}!saruman.c@{saruman.c}}
+\subsubsection[{NUM\_\-THREADS}]{\setlength{\rightskip}{0pt plus 5cm}\#define NUM\_\-THREADS~3}\label{saruman_8c_7735206bdfad487588bba2126b806ab7}
+
+
+
+
+Referenced by main().
+
+\subsection{Function Documentation}
+\index{saruman.c@{saruman.c}!main@{main}}
+\index{main@{main}!saruman.c@{saruman.c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, \/  char $\ast$ {\em argv}[$\,$])}\label{saruman_8c_0ddf1224851353fc92bfbff6f499fa97}
+
+
+Main function. Starts the program and does some housekeeping before calling the mapping functions \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em argc}]number of CLI arguments \item[{\em argv}]char array of the CLI arguments \end{description}
+\end{Desc}
+
+
+References alignment\_\-time, bases\_\-read, check\_\-user\_\-input(), chunk\_\-value, thread\_\-data::chunksize, clear\_\-name\_\-hash(), clear\_\-qgram\_\-index(), construct\_\-qgram\_\-index(), thread\_\-data::do\_\-reverse, thread\_\-data::error, error\_\-rate\_\-value, exact\_\-tresh, forward\_\-output\_\-control, genome\_\-chunk\_\-run, genome\_\-chunk\_\-value, genome\_\-file\_\-value, genome\_\-sequence, hash\_\-members, line\_\-offset, maximal\_\-errors\_\-allowed, read\_\-name\_\-hash::name, NUM\_\-THREADS, thread\_\-data::number\_\-of\_\-start\_\-positions, pos\_\-counter, print\_\-non\_\-matching\_\-reads, print\_\-qgram\_\-index\_\-statistics(), thread\_\-data::qgram\_\-length, qgram\_\-length, thread\_\-data::qgram\_\-start\_\-positions, qgram\_\-to\_\-read\_\-mapping(), thread\_\-data::read\_\-array, read\_\-file\_\-value, read\_\-length\_\-value, read\_\-multiple\_\-fasta\_\-file(), read\_\-names, thread\_\-data::read\_\-number, read\_\-number\_\-value, thread\_\-data::readlength, reads, thread\_\-data::rest, reverse\_\-output\_\-control, sw\_\-match\_\-value, sw\_\-mismatch\_\-value, and thread\_\-data\_\-array.
+
+\subsection{Variable Documentation}
+\index{saruman.c@{saruman.c}!thread\_\-data\_\-array@{thread\_\-data\_\-array}}
+\index{thread\_\-data\_\-array@{thread\_\-data\_\-array}!saruman.c@{saruman.c}}
+\subsubsection[{thread\_\-data\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf thread\_\-data} {\bf thread\_\-data\_\-array}[NUM\_\-THREADS]}\label{saruman_8c_06b5e9cc2498aeb53679fd0fe27bcdeb}
+
+
+
+
+Referenced by main().
