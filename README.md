@@ -1,5 +1,11 @@
 # SARUMAN
 
+## Note: this repository serves archival purposes
+
+SARUMAN was developed in 2009 with CUDA version 4. The source code is now on GitHub, however, while I was able to compile it with recent CUDA versions (>=10), I cannot give any guaranty that the software a) works or b) produces still correct results. 
+
+### Introduction
+
 Using GPU programming for short read mapping  
   
 Since the introduction of next generation sequencing technologies like Solexa, 454, and SOLiD the amount of generated data rises with each new technology upgrade. As the application scenarios especially of the short read techniques include the re-sequencing of known genomes or sequencing of closely related strains, new software tools are needed for the fast mapping of sequencing reads against a reference genome.  
@@ -15,23 +21,23 @@ Before downloading and testing SARUMAN please make sure that your own system mee
 
 - OS:	64bit Linux system (SARUMAN was tested on Ubuntu & Gentoo) 
 - Hardware: 4-8GB RAM, dual core CPU, GPU with at least 512MB for reasonable performance 
-- [**CUDA compatible graphics card**](https://web.archive.org/web/20110722113227/http://www.nvidia.com/object/cuda_gpus.html) 
-- [**CUDA capable driver**](https://web.archive.org/web/20110722113227/http://developer.nvidia.com/object/cuda_download.html) for your card 
-- [**CUDA runtime environment**](https://web.archive.org/web/20110722113227/http://developer.nvidia.com/object/cuda_download.html) for proper functioning of the CUDA module 
+- [**CUDA compatible graphics card**](http://www.nvidia.com/object/cuda_gpus.html) 
+- [**CUDA capable driver**](http://developer.nvidia.com/object/cuda_download.html) for your card 
+- [**CUDA runtime environment**](http://developer.nvidia.com/object/cuda_download.html) for proper functioning of the CUDA module 
 - Two additional libraries, both available as installation package for almost all linux distributions:  
-- [**argtable2**](https://web.archive.org/web/20110722113227/http://argtable.sourceforge.net/)  
-- [**uthash.h**](https://web.archive.org/web/20110722113227/http://uthash.sourceforge.net/) 
-- A working [**BioPerl**](https://web.archive.org/web/20110722113227/http://www.bioperl.org/) installation for converting the SARUMAN output into SAM format 
+- [**argtable2**](http://argtable.sourceforge.net/)  
+- [**uthash.h**](http://uthash.sourceforge.net/) 
+- A working [**BioPerl**](http://www.bioperl.org/) installation for converting the SARUMAN output into SAM format 
 
 ### Downloads
 
 The download package contains the SARUMAN Linux binaries tested on Ubuntu and Gentoo Linux, a Perl script for converting the original SARUMAN output into SAM format and a short documentation with installation instructions and commandline options.
 
-[**Download SARUMAN**](https://web.archive.org/web/20110722113227/ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman-current.tar.bz2)   
+[**Download SARUMAN**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman-current.tar.bz2)   
   
-[**E.Coli K12 artificial sample data**](https://web.archive.org/web/20110722113227/ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_artificial.tar.bz2)
+[**E.Coli K12 artificial sample data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_artificial.tar.bz2)
 
-[**Corynebacterium Glutamicum Illumina data**](https://web.archive.org/web/20110722113227/ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_CG.tar.bz2)
+[**Corynebacterium Glutamicum Illumina data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_CG.tar.bz2)
 
 ### Publication
 
@@ -40,16 +46,13 @@ If you use SARUMAN please cite the following publication:
 Exact and complete short read alignment to microbial genomes using GPU programming 
 Jochen Blom, Tobias Jakobi, Daniel Doppmeier, Sebastian Jaenicke, Jorn Kalinowski, Jens Stoye, and Alexander Goesmann
 
-Bioinformatics published 30 March 2011, 10.1093/bioinformatics/btr151 [**http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc**](https://web.archive.org/web/20110722113227/http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc) 
+Bioinformatics published 30 March 2011, 10.1093/bioinformatics/btr151 [**http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc**](http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc) 
 
-[**Download preprint manuscript**](https://web.archive.org/web/20110722113227/ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/publication.pdf)
+[**Download preprint manuscript**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/publication.pdf)
 
 ### Licence
 
 SARUMAN is free for non-commercial use.
 
 Commercial users: please contact [**tobias@jako.bi**](mailto:tobias@jako.bi).
-
-### People
-
 
