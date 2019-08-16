@@ -31,11 +31,9 @@ Before downloading and testing SARUMAN please make sure that your own system mee
 
 ### Downloads
 
-The download package contains the SARUMAN Linux binaries tested on Ubuntu and Gentoo Linux, a Perl script for converting the original SARUMAN output into SAM format and a short documentation with installation instructions and commandline options.
+The download package (compiled in 2011 with CUDA 4.1) contains the SARUMAN Linux binaries tested on Ubuntu and Gentoo Linux, a Perl script for converting the original SARUMAN output into SAM format and a short documentation with installation instructions and commandline options.
  
-- [**E.Coli K12 artificial sample data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_artificial.tar.bz2)
-
-- [**Corynebacterium Glutamicum Illumina data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_CG.tar.bz2)
+[FTP server with sample data](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/)
 
 ### Publication
 
