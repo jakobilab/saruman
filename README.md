@@ -32,27 +32,22 @@ Before downloading and testing SARUMAN please make sure that your own system mee
 ### Downloads
 
 The download package contains the SARUMAN Linux binaries tested on Ubuntu and Gentoo Linux, a Perl script for converting the original SARUMAN output into SAM format and a short documentation with installation instructions and commandline options.
+ 
+- [**E.Coli K12 artificial sample data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_artificial.tar.bz2)
 
-[**Download SARUMAN**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman-current.tar.bz2)   
-  
-[**E.Coli K12 artificial sample data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_artificial.tar.bz2)
-
-[**Corynebacterium Glutamicum Illumina data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_CG.tar.bz2)
+- [**Corynebacterium Glutamicum Illumina data**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/saruman_sample_data_CG.tar.bz2)
 
 ### Publication
 
 If you use SARUMAN please cite the following publication:
 
-Exact and complete short read alignment to microbial genomes using GPU programming 
+[**Exact and complete short read alignment to microbial genomes using GPU programming**](https://doi.org/10.1093/bioinformatics/btr151)
 Jochen Blom, Tobias Jakobi, Daniel Doppmeier, Sebastian Jaenicke, Jorn Kalinowski, Jens Stoye, and Alexander Goesmann
 
-Bioinformatics published 30 March 2011, 10.1093/bioinformatics/btr151 [**http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc**](http://bioinformatics.oxfordjournals.org/cgi/content/abstract/btr151v1?papetoc) 
+Bioinformatics published 30 March 2011, 10.1093/bioinformatics/btr151 
 
 [**Download preprint manuscript**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/publication.pdf)
 
 ### Licence
 
-SARUMAN is free for non-commercial use.
-
 Commercial users: please contact [**tobias@jako.bi**](mailto:tobias@jako.bi).
-
