@@ -33,7 +33,7 @@ Before downloading and testing SARUMAN please make sure that your own system mee
 
 The download package (compiled in 2011 with CUDA 4.1) contains the SARUMAN Linux binaries tested on Ubuntu and Gentoo Linux, a Perl script for converting the original SARUMAN output into SAM format and a short documentation with installation instructions and commandline options.
  
-[FTP server with sample data](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/)
+[FTP server with sample data: ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/](https://tinyurl.com/y2xnd2rm)
 
 ### Publication
 
