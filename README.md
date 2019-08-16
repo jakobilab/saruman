@@ -44,8 +44,6 @@ Jochen Blom, Tobias Jakobi, Daniel Doppmeier, Sebastian Jaenicke, Jorn Kalinowsk
 
 Bioinformatics published 30 March 2011, 10.1093/bioinformatics/btr151 
 
-[**Download preprint manuscript**](ftp://ftp.cebitec.uni-bielefeld.de/pub/software/saruman/publication.pdf)
-
 ### Licence
 
 Commercial users: please contact [**tobias@jako.bi**](mailto:tobias@jako.bi).
